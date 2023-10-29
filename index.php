@@ -20,6 +20,8 @@
 
         else
         {echo "The numbers are equal";}
+
+        
     ?>
 
 <body>
