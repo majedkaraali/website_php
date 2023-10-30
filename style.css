@@ -1,0 +1,30 @@
+.header {
+    background-color:brown;
+    width: auto;
+    height: 130px;
+
+}
+
+.parentbox {
+    display: flex;
+    justify-content: left;
+
+
+}
+
+
+.body {
+    background-color: aquamarine;
+}
+
+
+.parentbox div{
+    background-color: blueviolet;
+    
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    
+
+
+}
