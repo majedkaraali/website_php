@@ -7,7 +7,9 @@
 
 .parentbox {
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: s;
 
 
 }
@@ -19,11 +21,10 @@
 
 
 .parentbox div{
-    background-color: blueviolet;
-    
     padding: 10px;
     margin-top: 10px;
     border-radius: 5px;
+    height: fit-content;
     
 
 
