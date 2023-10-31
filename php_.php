@@ -1,11 +1,4 @@
-<html lang="en">
-<header>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Merhaba</title>
-</header>
-
-    <?php
+<?php
         $first_num=550;
         $second_num=550;
 
@@ -24,13 +17,6 @@
         
     ?>
 
+<?php
 
-
-<body>
-    
-</body>
-
-
-</html>
-
-
+?>
