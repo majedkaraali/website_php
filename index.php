@@ -3,29 +3,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merhaba</title>
+
+    <p><?php
+    ?></p>
 </header>
 
     <?php
-        $first_num=550;
-        $second_num=550;
 
-        if ($first_num>$second_num){
-            echo "The First num is bgreater than the second num";
-        }
-   
+    $sayi1=9;
+    $sayi2=9;
 
-        else if ($first_num<$second_num) {
-            echo "The First num is  less than the second num";
-        }
+    if ( $sayi1 < $sayi2 )
+        {echo "Sayi 1 daha kucuk  ";}
 
-        else
-        {echo "The numbers are equal";}
+    else if ($sayi1 > $sayi2 ){echo "Sayi 2 daha buyuk ";}
+
+    else
+    {echo "sayiler esit ";}
 
         
     ?>
 
 
-
+  
 <body>
     
 </body>
