@@ -3,31 +3,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merhaba</title>
+    <link rel="stylesheet" href="style2.css">
+    
 
-    <p><?php
-    ?></p>
+    
+
 </header>
 
-    <?php
 
-    $sayi1=9;
-    $sayi2=9;
+<body>
 
-    if ( $sayi1 < $sayi2 )
-        {echo "Sayi 1 daha kucuk  ";}
 
-    else if ($sayi1 > $sayi2 ){echo "Sayi 2 daha buyuk ";}
+    <div class="test1">
 
-    else
-    {echo "sayiler esit ";}
+
+        <?php
+        $sum=0;
+
+        for ($i=1 ; $i<=3 ; $i++)
+        {
+            for ($j=1 ; $j<=3 ; $j++)
+            {
+                echo " <br> $i  $j ";
+                
+            }
+         
+        }
 
         
-    ?>
+            
+        ?>
+    </div>
 
-
-  
-<body>
-    
 </body>
 
 

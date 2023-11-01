@@ -1,0 +1,11 @@
+.test1 {
+
+    background-color: rgb(37, 14, 252);
+    height: 500px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 10px;
+    margin: 20px;
+    padding-top: 10px;
+    color: rgb(0, 0, 0);
+}
