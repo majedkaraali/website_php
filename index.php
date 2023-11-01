@@ -20,20 +20,20 @@
 
 
         <?php
+        $is_prime=TRUE;
 
-        
-        $sum=0;
+        $sayi=15;
 
-        for ($i=1 ; $i<=3 ; $i++)
-        {
-            for ($j=1 ; $j<=3 ; $j++)
-            {
-                echo " <br> $i  $j ";
-                
+       for ($i=1 ; $i<=17; $i++){
+    
+
+            if ($sayi % $i == 0){
+                echo "Not Prime";
+                break;
             }
-         
-        }
 
+       
+       }
         
 
 
