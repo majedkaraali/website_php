@@ -22,18 +22,26 @@
         <?php
         $is_prime=TRUE;
 
-        $sayi=15;
+        $sayi=14;
 
-       for ($i=1 ; $i<=17; $i++){
+       for ($i=2 ; $i<17; $i++){
     
 
             if ($sayi % $i == 0){
-                echo "Not Prime";
+                $is_prime=FALSE;
+                echo $is_prime;
                 break;
+            }
+
+            else{
+                $is_prime=TRUE;
+                
+                    
             }
 
        
        }
+       echo $is_prime;
         
 
 
