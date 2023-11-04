@@ -1,52 +1,27 @@
-<html lang="en">
-<header>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Merhaba</title>
-    <link rel="stylesheet" href="style2.css">
-    
-
-    
-
-</header>
-
+<html>
 <body>
 
-    <div class="test1">
-        <?php
-        $is_prime=TRUE;
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+  Name: <input type="text" name="fname">
+  SName: <input type="text" name="sfname">
+  <input type="submit">
+</form>
 
-        $sayi=14;
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // collect value of input field
+  $name = $_POST['fname'];
+  $sname = $_POST['sfname'];
+  if (empty($name)) {
+    echo "Name is empty";
+  } else {
+    echo $name;
+    echo '<br>';
+    echo $sname;
 
-       for ($i=2 ; $i<17; $i++){
-    
-
-            if ($sayi % $i == 0){
-                $is_prime=FALSE;
-                echo $is_prime;
-                break;
-            }
-
-            else{
-                $is_prime=TRUE;
-                
-                    
-            }
-
-       
-       }
-       echo $is_prime;
-        
-
-
-
-            
-        ?>
-    </div>
+  }
+}
+?>
 
 </body>
-
-
 </html>
-
-
