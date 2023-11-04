@@ -1,0 +1,25 @@
+.header  .navv{
+    font-size: 22px;
+    display:flex;
+    gap: 50px;
+    margin-right: 5%;
+    
+
+}
+
+.header  .ul .li :hover{
+    background-color: azure;
+}
+
+.logo{
+    margin-left: 5%;
+}
+
+.header{
+    height: 90px;
+    background-color: darkslategrey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+} 

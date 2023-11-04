@@ -10,15 +10,9 @@
 
 </header>
 
-
 <body>
 
-
     <div class="test1">
-
-
-
-
         <?php
         $is_prime=TRUE;
 
