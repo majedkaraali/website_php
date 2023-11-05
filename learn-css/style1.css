@@ -1,0 +1,16 @@
+.main-cont{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+
+.navbar {
+    background-color: aqua;
+    width: 90%;
+    margin: auto ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
