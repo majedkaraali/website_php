@@ -10,6 +10,7 @@
     height: 100vh;
     background-image: url(bag.jpg);
     background-size: cover;
+    background-attachment: fixed;
 
     
 }
