@@ -9,7 +9,8 @@
     width: 100%;
     height: 100vh;
     background-image: url(bag.jpg);
-    background-image: -webkit-image-set(center);
+    background-size: cover;
+
     
 }
 
