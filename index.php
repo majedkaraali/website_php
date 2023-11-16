@@ -10,13 +10,16 @@
 
 
   <?php
-    function sum (int $a , int $b){
-        int $sum=$a+$b;
-        echo $sum."<br>";
-    }
+   function ortalama($sayi1,$sayi2){
+    $sonuc=($sayi1+$sayi2)/2;
 
-    echo sum(5,10)
+    echo $sonuc;
 
+
+
+   }
+
+    ortalama(5,9);
 
     ?>
 
