@@ -8,14 +8,11 @@
 
 <body>
 
-
   <?php
    function ortalama($sayi1,$sayi2){
     $sonuc=($sayi1+$sayi2)/2;
 
     echo $sonuc;
-
-
 
    }
 
@@ -23,18 +20,10 @@
 
     ?>
 
-    
-
-    
-  
-  
-  
-
 
 
 
 </body>
-
 
 
 </html>
