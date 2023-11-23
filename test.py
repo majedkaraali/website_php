@@ -1,4 +1,1 @@
-print("hello WOrld")
-_A=5
-_a=52
-print(_a)
+print(0.1+0.2)
