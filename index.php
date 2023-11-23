@@ -8,18 +8,25 @@
 
 <body>
 
-  <?php
-   function ortalama($sayi1,$sayi2){
-    $sonuc=($sayi1+$sayi2)/2;
+<?php
+$x = 1;
 
-    echo $sonuc;
+while($x <= 5) {
+  echo "The number is: $x <br>";
+  $x++;
+}
 
-   }
+$x = 1;
+echo "------------------------------<br>";
 
-    ortalama(5,9);
+do {
+  echo "The number is: $x <br>";
+  $x++;
+} while ($x <= 5);
 
-    ?>
 
+
+?>
 
 
 
