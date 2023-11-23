@@ -19,15 +19,51 @@ while($x <= 5) {
 $x = 1;
 echo "------------------------------<br>";
 
+
 do {
   echo "The number is: $x <br>";
   $x++;
 } while ($x <= 5);
 
+echo "------------------------------<br>";
 
 
+for ($x = 1; $x <= 5; $x++) {
+    echo "The number is: $x <br>";
+  }
+
+
+echo "------------------------------<br>";
+
+for ($x = 0; $x < 10; $x++) {
+  if ($x == 4) {
+    break;
+  }
+  echo "The number is: $x <br>";
+}
+
+echo "------------------------------<br>";
+
+for ($x = 0; $x < 6; $x++) {
+    if ($x == 4) {
+      continue;
+    }
+
+    echo "The number is: $x <br>";
+  }
+  echo "------------------------------<br>";
+echo $_SERVER['PHP_SELF'];
+echo "<br>";
+echo $_SERVER['SERVER_NAME'];
+echo "<br>";
+echo $_SERVER['HTTP_HOST'];
+echo "<br>";
+
+echo "<br>";
+echo $_SERVER['HTTP_USER_AGENT'];
+echo "<br>";
+echo $_SERVER['SCRIPT_NAME'];
 ?>
-
 
 
 </body>
