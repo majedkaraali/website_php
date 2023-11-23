@@ -8,65 +8,67 @@
 
 <body>
 
-<?php
-$x = 1;
 
-while($x <= 5) {
-  echo "The number is: $x <br>";
-  $x++;
+
+
+  <?php
+  if ($_SERVER["REQUEST_METHOD"]=="POST"){ 
+  echo "merhaba";
+    $ad=$_POST["ad"];
+    $soyad=$_POST["sy"];
+    $sifre=$_POST["sifre"];
+    echo $ad;
 }
 
-$x = 1;
-echo "------------------------------<br>";
 
-
-do {
-  echo "The number is: $x <br>";
-  $x++;
-} while ($x <= 5);
-
-echo "------------------------------<br>";
-
-
-for ($x = 1; $x <= 5; $x++) {
-    echo "The number is: $x <br>";
-  }
-
-
-echo "------------------------------<br>";
-
-for ($x = 0; $x < 10; $x++) {
-  if ($x == 4) {
-    break;
-  }
-  echo "The number is: $x <br>";
-}
-
-echo "------------------------------<br>";
-
-for ($x = 0; $x < 6; $x++) {
-    if ($x == 4) {
-      continue;
+    else{
+        ?>
+        
+        <form action="index.php" method="post">
+        <table border=1>
+            <tr>
+                <td><Label>Adi</Label></td>
+                <td><input  name ="ad" type="text"></td>
+               
+            </tr>
+    
+            <tr>
+                <td><Label>Soyadi</Label></td>
+                <td><input  name ="sy" type="text"></td>
+               
+            </tr>
+    
+            <tr>
+            <td><Label>Şifre</Label></td>
+            <td><input name= "sifre" type="password"></td>
+            </tr>
+    
+            <tr>
+                <td></td>
+                <td ><input type="reset"><input type="submit"></td>
+            </tr>
+    
+            
+      </table>
+      </form>
+      <?php
     }
+    ?>
 
-    echo "The number is: $x <br>";
-  }
-  echo "------------------------------<br>";
-echo $_SERVER['PHP_SELF'];
-echo "<br>";
-echo $_SERVER['SERVER_NAME'];
-echo "<br>";
-echo $_SERVER['HTTP_HOST'];
-echo "<br>";
 
-echo "<br>";
-echo $_SERVER['HTTP_USER_AGENT'];
-echo "<br>";
-echo $_SERVER['SCRIPT_NAME'];
-?>
+
+    
+
+    
+  
+  
+  
+
+
 
 
 </body>
+
 
 
 </html>
