@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+}
+
+.header {
+    background-color: aliceblue;
+    display:flex;
+    justify-content: space-between;
+    padding: 25px;
+
+}
+.header ul {
+    display: flex;
+
+    justify-content: space-around;
+    gap: 50px;
+
+}
+
+
+
+.header ul li{
+    display:inline-block ;
+    list-style-type: none;
+
+
+}
+
+.header ul li a{
+    text-decoration: none;
+    color: dimgrey;
+    text-transform: uppercase;
+
+}
