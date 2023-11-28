@@ -31,7 +31,18 @@ if ($result->num_rows == 1) {
     $row = $result->fetch_assoc();
     if (password_verify($password, $row['user_Password'])) {
         // Password is correct, you can proceed with login
-        echo "Login successful!";
+        session_start(); // Start the session at the beginning of your script
+
+// Assuming you have verified the user's credentials and obtained the user_id
+        $user_id = $row['user_ID']; // Replace with the actual user_id
+    // Save user_id in the session
+        $_SESSION["user_id"] =$user_id;
+        echo $user_id;
+        global $_SESSION;
+        header("Location: index.php");
+
+        
+
     } else {
         // Password is incorrect
         echo "Incorrect password!";
