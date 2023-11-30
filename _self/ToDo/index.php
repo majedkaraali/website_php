@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="main">
-        <h1>Hi</h1>
+    <div class="header">
+        <div class="nav">
+            <nav></nav>
+        </div>
+        
     </div>
 </body>
 </html>
