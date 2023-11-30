@@ -24,6 +24,7 @@ body{
     align-items: center;
 }
 
+
 .main .right{
     width: 40%;
     height: 500px;
@@ -38,13 +39,13 @@ body{
 .main .form-cont{
     display: flex;
     width:40%;
-    background-color:rgb(22, 104, 84); ;
+    background-color:rgb(104, 22, 22); ;
     border-color: rgb(22, 104, 84);
     border-style:groove;
     border-width: 5px;
-    border-radius: 9px;
+    border-radius: 90px;
     height: 500px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
 }

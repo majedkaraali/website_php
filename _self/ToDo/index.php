@@ -13,6 +13,7 @@
 
 
             <div class="form-cont">
+                <h1>Login</h1>
                 <form  method="post">
             
                     <label for="email">Email:</label><br>
