@@ -17,9 +17,9 @@
                 <form  method="post">
             
                     <label for="email">Email:</label><br>
-                    <input type="email" name="email" id="email"><br>
-                    <label for="pass">Password</label><br>
-                    <input type="password" name="pass" id="pass"><br>
+                    <input type="email" name="email" id="email" required><br>
+                    <label for="pass">Password </label><br>
+                    <input type="password" name="pass" id="pass" required><br>
                     <input type="submit">&nbsp;<input type="reset">
 
                 </form>
