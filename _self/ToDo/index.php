@@ -17,13 +17,15 @@
 
 
             <div class="intro">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates itaque eum placeat, assumenda tempore magni debitis, doloremque sapiente tempora nihil qui voluptatem facere delectus sit quae ducimus. Possimus, non quidem!</p>
+                <!--  <div class="hd"><h1>To-Do</h1></div> --> 
+                <img  src="res/img/1.jpg" alt="1" width="500" height="500">
+                
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates itaque eum placeat, assumenda tempore magni debitis, doloremque sapiente tempora nihil qui!</p>
             </div>
 
 
             <div class="login-sec">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut earum minus aspernatur non, sequi odit sint placeat sapiente quasi, ducimus libero nisi facere a soluta neque blanditiis nostrum vel adipisci.</p>
-            </div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicin.</p>
 
 
 

@@ -1,6 +1,7 @@
 *{
     padding: 0px;
     margin: 0px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     
 }
 
@@ -22,8 +23,9 @@ body{
 
 
 .main .login-sec{
-    width: 42%;
-    background-color:ghostwhite;
+    width: 35%;
+    background-color:rgb(255, 249, 213);
+    
     height: 100vh;
    font-size: 2em;
     border-width: 5px;
@@ -33,17 +35,24 @@ body{
     text-align: center;
 }
 
-
+.main .hd {
+    float:top;
+    background-color: aqua;
+}
 .main .intro{
-    background-color: blanchedalmond;
-    width: 58%;
+    background-color:rgb(255, 255, 255);
+    
+    width: 65%;
     height: 100vh;
-   font-size: 2em;
+    font-size: 2em;
     border-width: 5px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    gap: 5px;;
     text-align: center;
+    padding-right: 20px;
+
     
 }
 
