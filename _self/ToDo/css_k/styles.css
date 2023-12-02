@@ -5,16 +5,15 @@
 }
 
 body{
-    background-color: aqua;
     height: 100vh;
 }
 .main {
-    margin-top: 120px;
     width: 100%;
 
 }
 
-.main .cal{
+
+.main .container{
    
     display: flex;
     justify-content: space-evenly;
@@ -22,9 +21,10 @@ body{
 }
 
 
-.main .right{
-    width: 40%;
-    height: 500px;
+.main .login-sec{
+    width: 42%;
+    background-color:ghostwhite;
+    height: 100vh;
    font-size: 2em;
     border-width: 5px;
     display: flex;
@@ -33,25 +33,18 @@ body{
     text-align: center;
 }
 
-.main .form-cont{
-    display: block;
-    width:40%;
-    background-color:rgb(22, 104, 84); ;
-    border-color: rgb(22, 104, 84);
-    border-style:groove;
+
+.main .intro{
+    background-color: blanchedalmond;
+    width: 58%;
+    height: 100vh;
+   font-size: 2em;
     border-width: 5px;
-    border-radius: 9px;
-    height: 500px;
-    justify-content: space-around;
+    display: flex;
+    justify-content: center;
     align-items: center;
-
-
+    text-align: center;
+    
 }
 
-.main .form-cont form{
-    font-size: 1.8em;
-    
 
-    
-
-}

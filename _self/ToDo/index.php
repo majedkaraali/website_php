@@ -8,31 +8,33 @@
 
 </head>
 <body>
+
     <div class="main">
-        <div class="cal">
 
-
-            <div class="form-cont">
-                <h1>Login</h1>
-                <form  method="post" action="login.php">
-            
-                    <label for="email">Email:</label><br>
-                    <input type="email" name="email" id="email" required><br>
-                    <label for="pass">Password </label><br>
-                    <input type="password" name="pass" id="pass" required><br>
-                    <input type="submit">&nbsp;<input type="reset">
-
-                </form>
-
-                <p>New  Here? <a href="register.php">Register</a></p>
+        <div class="container">
 
            
+
+
+            <div class="intro">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates itaque eum placeat, assumenda tempore magni debitis, doloremque sapiente tempora nihil qui voluptatem facere delectus sit quae ducimus. Possimus, non quidem!</p>
             </div>
-           
-            <div class="right">
+
+
+            <div class="login-sec">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut earum minus aspernatur non, sequi odit sint placeat sapiente quasi, ducimus libero nisi facere a soluta neque blanditiis nostrum vel adipisci.</p>
             </div>
-    </div>
+
+
+
+
+        </div>
+
+        
+   
+
+   
+ 
 
     </div>
 
