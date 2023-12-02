@@ -20,15 +20,20 @@
 </form>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    $user_email = $_POST['email'];
+    $user_password = $_POST['password'];
+    $hashedPassword = password_hash($user_password, PASSWORD_DEFAULT);
+    
     require('data_con.php');
 
+    echo"$user_password"."GG<br>";
 
-    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+   
+    
 
     $stmt = $conn->prepare("INSERT INTO users (user_Email, user_Password) VALUES (?, ?)");
-    $stmt->bind_param("ss", $email, $hashedPassword);
+    
+    $stmt->bind_param("ss", $user_email, $password);
 
     if ($stmt->execute()) {
         echo "Registration successful!";

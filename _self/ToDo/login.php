@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
         echo $row['user_Password'];
-        
+
         if (password_verify($password, $row['user_Password'])) {
             session_start();
             $_SESSION['user_id'] = $row['user_id'];
