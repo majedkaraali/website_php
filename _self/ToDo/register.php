@@ -14,10 +14,9 @@
     
     <input type="submit">&nbsp;<input type="reset">
 
-
-
-
 </form>
+
+
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user_email = $_POST['email'];
@@ -26,10 +25,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     require('data_con.php');
 
-    echo"$user_password"."GG<br>";
-
-   
-    
 
     $stmt = $conn->prepare("INSERT INTO users (user_Email, user_Password) VALUES (?, ?)");
     
@@ -37,13 +32,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
         echo "Registration successful!";
+        header("Location: index.php");
     } else {
         echo "Error during registration: " . $stmt->error;
     }
 
     $stmt->close();
+    $conn->close();
+
 }
 
-$conn->close();
 
 ?>

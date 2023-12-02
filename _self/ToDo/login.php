@@ -33,7 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<!-- Add this section to display error messages -->
 <?php if (isset($error_message)): ?>
     <p><?php echo $error_message; ?></p>
 <?php endif; ?>

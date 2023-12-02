@@ -9,7 +9,6 @@ body{
     height: 100vh;
 }
 .main {
-    
     margin-top: 120px;
     width: 100%;
 
@@ -17,7 +16,6 @@ body{
 
 .main .cal{
    
-    
     display: flex;
     justify-content: space-evenly;
     align-items: center;
