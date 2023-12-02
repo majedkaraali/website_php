@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $stmt = $conn->prepare("INSERT INTO users (user_Email, user_Password) VALUES (?, ?)");
     
-    $stmt->bind_param("ss", $user_email, $password);
+    $stmt->bind_param("ss", $user_email, $hashedPassword);
 
     if ($stmt->execute()) {
         echo "Registration successful!";
