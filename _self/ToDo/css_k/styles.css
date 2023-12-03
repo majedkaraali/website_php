@@ -39,8 +39,7 @@ body{
 
 .main .container .intro .head {
 
-    width: 100%;
-
+    align-self: flex-start;
     text-align: left;
 
 
