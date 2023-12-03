@@ -17,8 +17,12 @@
 
 
             <div class="intro">
-                <!--  <div class="hd"><h1>To-Do</h1></div> --> 
-                <img  src="res/img/1.jpg" alt="1" width="500" height="500">
+
+                <div class="head">
+                    <h1>To-Do</h1>
+                </div> 
+
+                <img  src="res/img/1.jpg" alt="1" width="350" height="350">
                 
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates itaque eum placeat, assumenda tempore magni debitis, doloremque sapiente tempora nihil qui!</p>
             </div>
