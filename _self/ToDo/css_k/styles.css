@@ -25,14 +25,22 @@ body{
 
 
 
-button{
-    width: 120px;   
-    height: 40px; 
+a{
+    position: relative;
+    background: floralwhite;
+    text-decoration: none;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    
+    
 }
 
+
+
 .main .logo{
-    align-self: flex-start;
-    
+    padding-bottom: 200px;
+
 }
 .main .login-sec{
     width: 35%;

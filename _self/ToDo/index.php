@@ -28,7 +28,7 @@
             <div class="login-sec">
 
                 <div class="logo">
-                    <img  src="res/img/logo2.png" alt="logo2" width="160" height="50">
+                    <img  src="res/img/logo.png" alt="logo" width="160" height="50">
                 </div>
 
                 <div class="head">
@@ -37,8 +37,8 @@
 
             
                 <div class="get_start_btns">
-                    <button>Login</button> 
-                    <button>Sign Up</button>
+                    <a href="login.php"><span>Log in</span></a>
+                    <a href="register.php"><span>Sign Up</span></a>
                 </div>
 
 
