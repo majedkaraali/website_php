@@ -19,20 +19,31 @@ body{
    
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     align-items: center;
     
 }
 
 
+
+button{
+    width: 120px;   
+    height: 40px; 
+}
+
+.main .logo{
+    align-self: flex-start;
+    
+}
 .main .login-sec{
     width: 35%;
-    background-color:rgb(252, 214, 0);
+    background-color:rgb(247, 221, 183);
     height: 100vh;
    font-size: 2em;
     border-width: 5px;
+    gap: 40px;
+    flex-direction: column;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     text-align: center;
 }
@@ -48,6 +59,7 @@ body{
     border-width: 5px;
     display: flex;
     justify-content: space-around;
+    
     align-items: center;
     gap: 5px;;
     text-align: center;

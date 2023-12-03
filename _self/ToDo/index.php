@@ -21,16 +21,27 @@
 
                 <img  src="res/img/1.jpg" alt="1" width="350" height="350">
                 
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates itaque eum placeat, assumenda tempore magni debitis, doloremque sapiente tempora nihil qui!</p>
+                <p>Your gateway to a more organized and accomplished life, bridging the gap between work and relaxation.</p>
             </div>
 
 
             <div class="login-sec">
-                
+
+                <div class="logo">
+                    <img  src="res/img/logo2.png" alt="logo2" width="160" height="50">
+                </div>
+
                 <div class="head">
-                    <h1>To-Do</h1>
+                    <h3>Get Startted.</h3>
                 </div> 
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicin.</p>
+
+            
+                <div class="get_start_btns">
+                    <button>Login</button> 
+                    <button>Sign Up</button>
+                </div>
+
+
 
 
 
