@@ -19,6 +19,7 @@ body{
    
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     
 }
@@ -26,36 +27,26 @@ body{
 
 .main .login-sec{
     width: 35%;
-    background-color:rgb(255, 249, 213);
+    background-color:rgb(252, 214, 0);
     height: 100vh;
    font-size: 2em;
     border-width: 5px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
 }
 
 
-.main .container .intro .head {
-
-    align-self: flex-start;
-    text-align: left;
-
-
-   
-}
 
 
 .main .intro{
     background-color:rgb(255, 255, 255);
-    
     width: 65%;
     height: 100vh;
     font-size: 2em;
     border-width: 5px;
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     gap: 5px;;

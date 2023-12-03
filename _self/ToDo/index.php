@@ -18,9 +18,6 @@
 
             <div class="intro">
 
-                <div class="head">
-                    <h1>To-Do</h1>
-                </div> 
 
                 <img  src="res/img/1.jpg" alt="1" width="350" height="350">
                 
@@ -29,6 +26,10 @@
 
 
             <div class="login-sec">
+                
+                <div class="head">
+                    <h1>To-Do</h1>
+                </div> 
             <p>Lorem, ipsum dolor sit amet consectetur adipisicin.</p>
 
 
