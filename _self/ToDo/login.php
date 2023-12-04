@@ -1,5 +1,23 @@
+
+<div class="form-cont">
+                <h1>Login</h1>
+                <form  method="post">
+            
+                    <label for="email">Email:</label><br>
+                    <input type="email" name="email" id="email" required><br>
+                    <label for="pass">Password </label><br>
+                    <input type="password" name="pass" id="pass" required><br>
+                    <input type="submit">&nbsp;<input type="reset">
+
+                </form>
+
+                <p>New  Here? <a href="register.php">Register</a></p>
+            </div>
+
 <?php
 require('data_con.php');
+
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user_email = $_POST['email'];

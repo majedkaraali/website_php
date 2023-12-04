@@ -27,12 +27,15 @@ body{
 
 a{
     position: relative;
-    background: floralwhite;
+    color: white;
+    background:blue;
     text-decoration: none;
     width: 200px;
     text-align: center;
     padding: 10px;
-    
+    border-radius: 5px;
+    font-size: 32px;
+
     
 }
 
@@ -44,7 +47,7 @@ a{
 }
 .main .login-sec{
     width: 35%;
-    background-color:rgb(247, 221, 183);
+    background-color:rgb(255, 242, 222);
     height: 100vh;
    font-size: 2em;
     border-width: 5px;
@@ -54,8 +57,12 @@ a{
     justify-content: center;
     align-items: center;
     text-align: center;
+    
 }
 
+.main .login-sec .get_start_btns{
+    padding-bottom: 50px;
+}
 
 
 
@@ -69,7 +76,7 @@ a{
     justify-content: space-around;
     
     align-items: center;
-    gap: 5px;;
+    gap: 8px;;
     text-align: center;
     padding-right: 20px;
 
