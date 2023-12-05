@@ -14,8 +14,10 @@ body{
 
 }
 
-.menu .task{
-    background-color: aquamarine;
+.task{
+    width: 500px;
+    background-color: rgb(73, 250, 73);
+    border-radius: 5px;
 }
 
 
