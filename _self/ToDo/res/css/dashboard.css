@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+
+body{
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+}
+
+
+.container .menu{
+    width: 25%;
+    background-color: blueviolet;
+}
+
+
+.container .board{
+    width: 75%;
+    background-color: cadetblue;
+}
+
+
+table{
+    border: 2px;
+    background-color: red;
+}
+
+.task{
+    width: 500px;
+    background-color: rgb(73, 250, 73);
+    border-radius: 5px;
+}
+
+

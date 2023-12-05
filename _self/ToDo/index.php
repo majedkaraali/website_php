@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>ToDo</title>
-    <link rel="stylesheet" href="css_k/styles.css">
+    <link rel="stylesheet" href="res/css/styles.css">
 
 </head>
 <body>
@@ -12,9 +12,6 @@
     <div class="main">
 
         <div class="container">
-
-           
-
 
             <div class="intro">
 
