@@ -35,10 +35,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if (password_verify($user_password, $row['user_Password'])) {
             session_start();
-            $_SESSION['user_id'] = $row['user_id'];
+            $_SESSION['user_id'] = $row['user_ID'];
+            $user_id = $_SESSION['user_id'];
 
             echo"YES";
             header("Location: dashboard.php");
+            echo"$user_id";
             exit();
         } else {
             $error_message = "Incorrect password!";
