@@ -4,22 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"  href="res/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Dashboard</title>
 
+
 </head>
-<h1>Dashboard</h1>
-
-
 
 
 <body>
 
-    <dif class="container">
+
+ 
 
 
     <div class="menu">
-        <h4>welcome</h4>
+        <ul>
+            <li class="profile">
+                <div class="img-box">
+                    <img src="res/img/default.png" alt="user photo " width="50px" height= "50px"> 
+
+                    <h2>User Name</h2>
+                </div> 
+                
+            </li>
+            
+            <li>
+                <a href="#" >
+                    <i class="fa-solid fa-chart-line"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="#" >
+                    <i class="fas fas-table"></i>
+                    Important
+                </a>
+            </li>
+            <li>
+                <a href="#" >
+                    <i class="fas fas-table"></i>
+                    Planned
+                </a>
+            </li>
+            <li>
+                <a href="#" >
+                    <i class="fas fas-table"></i>
+                    Tasks
+                </a>
+            </li>
+  
+            
+            
+
+        </ul>
     </div>
 
 
@@ -73,8 +111,24 @@
     </table>
     </div>
 
-    </div>
 
+
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<i class="fa fa-car"></i>
+<i class="fa fa-car" style="font-size:48px;"></i>
+<i class="fa fa-car" style="font-size:60px;color:red;"></i>
 
 </body>
 </html>

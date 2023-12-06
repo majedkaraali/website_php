@@ -1,26 +1,47 @@
+
+
 *{
-    margin: 0;
+
     padding: 0;
-   
+    margin: 0;
+    
+
 }
 
+.img-box{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 body{
-    height: 100vh;
-}
 
-.container{
     display: flex;
     height: 100vh;
+    
+    
+
+
 }
+/*
+.profile{
+    
+}
+*/
 
-
-.container .menu{
+.menu{
     width: 25%;
-    background-color: blueviolet;
+    padding: 20px;
+    background-color: rgb(121, 80, 80);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+
 }
 
 
-.container .board{
+.board{
     width: 75%;
     background-color: cadetblue;
 }
@@ -33,8 +54,21 @@ table{
 
 .task{
     width: 500px;
-    background-color: rgb(73, 250, 73);
+    background-color: rgb(88, 24, 54);
     border-radius: 5px;
+}
+
+ul{
+    list-style: none;
+}
+
+ul li a{
+    background-color: aqua;
+    display: block;
+    height: 25px;
+    padding: 5px;
+    margin: 5px;
+    
 }
 
 
