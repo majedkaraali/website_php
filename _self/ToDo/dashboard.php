@@ -20,6 +20,9 @@
 
     <div class="menu">
         <ul>
+
+ 
+
             <li class="profile">
                 <div class="img-box">
                     <img src="res/img/default.png" alt="user photo " width="50px" height= "50px"> 
@@ -31,7 +34,7 @@
             
             <li>
                 <a href="#" >
-                    <i class="fa-solid fa-chart-line"></i>
+                <i class="fa fa-home"></i>
                     Dashboard
                 </a>
             </li>
@@ -119,16 +122,3 @@
 
 
 
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-
-<i class="fa fa-car"></i>
-<i class="fa fa-car" style="font-size:48px;"></i>
-<i class="fa fa-car" style="font-size:60px;color:red;"></i>
-
-</body>
-</html>
