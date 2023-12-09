@@ -42,13 +42,13 @@
        
             
             <li>
-                <a href="#" >
+                <a href="dashboard.php" >
                 <i class="fa fa-home"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             <li>
-                <a href="#" >
+                <a href="important.php" >
                     <i class="fa fa-star"></i>
                     
                     <span>Important</span>
