@@ -96,6 +96,7 @@
                 <th>TASK</th>
                 <th>DATE</th>
                 <th>STATUS</th>
+
             </tr>
         </thead>
 
@@ -117,7 +118,7 @@
            foreach ($qr_run as $val){
             
             ?>
-            <tr>
+            <tr class="item">
             <td><?=$val['task'] ?></td>
             <td><?=$val['due_date'] ?></td>
             <td><?=$val['status'] ?></td>
