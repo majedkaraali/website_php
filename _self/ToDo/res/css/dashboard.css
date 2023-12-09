@@ -22,11 +22,6 @@ body{
     justify-content: space-between;
     gap: 20px;
 }
-/*
-.profile{
-    
-}
-*/
 
 .menu{
     width: 25%;
@@ -35,6 +30,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     
 
 
@@ -57,6 +53,7 @@ body{
     border-radius: 5px;
     padding: 5px;
     width: 100%;
+
 }
 
 td{
@@ -69,7 +66,7 @@ td{
     background-color: rgb(161, 158, 137);
     border-radius: 5px;
     text-align: center;
-    
+    font-size: x-large;
 
 }
 
@@ -78,11 +75,12 @@ ul{
 }
 
 .profile{
+
     margin-bottom: 50px;
 }
 
 ul li a{
-    background-color: rgb(247, 219, 104);
+    background-color: rgb(87, 83, 71);
     display: block;
     width: 100%;
     height: 30px;

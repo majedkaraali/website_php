@@ -106,7 +106,7 @@
         require("data_con.php");
         
         $user_id = $_SESSION['user_id'];
-        $qr="SELECT * FROM todo_items WHERE user_id=$user_id";
+        $qr="SELECT * FROM todo_items WHERE user_id=$user_id and status!='Completed'";
         $qr_run=mysqli_query($conn,$qr);
 
         if (!$qr_run) {
@@ -135,8 +135,59 @@
     
       
     </table>
+    
+
+    <div class="head-box">
+        <h1>Completed Tasks</h1>
     </div>
 
+
+    <table class="task" >
+        <thead>             
+            <tr>
+                <th>TASK</th>
+                <th>DATE</th>
+                <th>STATUS</th>
+            </tr>
+        </thead>
+
+     
+
+        <?php
+     
+        require("data_con.php");
+        
+        $user_id = $_SESSION['user_id'];
+        $qr="SELECT * FROM todo_items WHERE user_id=$user_id and status='Completed' ";
+        $qr_run=mysqli_query($conn,$qr);
+
+        if (!$qr_run) {
+            die("Query failed: " . mysqli_error($conn));
+        }
+
+        if (mysqli_num_rows($qr_run)>0){
+           foreach ($qr_run as $val){
+            
+            ?>
+            <tr>
+            <td><?=$val['task'] ?></td>
+            <td><?=$val['due_date'] ?></td>
+            <td><?=$val['status'] ?></td>
+            <td><button>Redo</button></td>
+   
+            </tr>
+
+
+            <?php
+           }
+        }
+
+        ?>
+    
+    
+      
+    </table>
+    </div>
 
 
 
