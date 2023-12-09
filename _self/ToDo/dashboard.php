@@ -23,14 +23,25 @@
 
  
 
-            <li class="profile">
+            <li class="profile" >
                 <div class="img-box">
                     <img src="res/img/default.png" alt="user photo " width="50px" height= "50px"> 
-
-                    <h2>User Name</h2>
+                    <?php
+                    $user_name="USS";
+                    {
+                        
+                        ?>
+                        <h2><?=$user_name ?></h2>
+                        <?php
+                    }?>
+                   
+                    
                 </div> 
+
                 
             </li>
+
+       
             
             <li>
                 <a href="#" >
@@ -40,19 +51,22 @@
             </li>
             <li>
                 <a href="#" >
-                    <i class="fas fas-table"></i>
+                    <i class="fa fa-star"></i>
+                    
                     Important
                 </a>
             </li>
             <li>
                 <a href="#" >
-                    <i class="fas fas-table"></i>
+                    <i class="fa fa-calendar"></i>
+                    
                     Planned
                 </a>
             </li>
             <li>
                 <a href="#" >
-                    <i class="fas fas-table"></i>
+                <i class="fa fa-sticky-note" aria-hidden="true"></i>
+                    
                     Tasks
                 </a>
             </li>
@@ -68,7 +82,15 @@
 
     <div class="board">
 
-    <table class="task" border="2px">
+    <div class="head-box">
+        <h1>Dashboard</h1>
+    </div>
+
+    <div class="head-box">
+        <h1>Going Tasks</h1>
+    </div>
+
+    <table class="task" >
         <thead>             
             <tr>
                 <th>TASK</th>
@@ -99,7 +121,8 @@
             <td><?=$val['task'] ?></td>
             <td><?=$val['due_date'] ?></td>
             <td><?=$val['status'] ?></td>
-            <td><button>edit</button></td>
+            <td><button>Done</button></td>
+   
             </tr>
 
 

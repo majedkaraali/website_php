@@ -14,14 +14,13 @@
     align-items: center;
     justify-content: space-between;
 }
+
+
 body{
-
-    display: flex;
     height: 100vh;
-    
-    
-
-
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 }
 /*
 .profile{
@@ -32,10 +31,12 @@ body{
 .menu{
     width: 25%;
     padding: 20px;
-    background-color: rgb(121, 80, 80);
+    background-color: rgb(247, 159, 104);
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    justify-content: space-between;
+    
+
 
 
 }
@@ -43,37 +44,58 @@ body{
 
 .board{
     width: 75%;
-    background-color: cadetblue;
+    margin: 5px;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
 }
 
+.board .head-box{
+    background-color: rgb(252, 157, 79);
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+}
 
-table{
-    border: 2px;
-    background-color: red;
+td{
+    background-color:white;
+    height: 40px;
 }
 
 .task{
-    width: 500px;
-    background-color: rgb(88, 24, 54);
+    width: 100%;
+    background-color: rgb(161, 158, 137);
     border-radius: 5px;
+    text-align: center;
+    
+
 }
 
 ul{
     list-style: none;
 }
 
+.profile{
+    margin-bottom: 50px;
+}
+
 ul li a{
-    background-color: aqua;
+    background-color: rgb(247, 219, 104);
     display: block;
-    height: 25px;
+    width: 100%;
+    height: 30px;
     padding: 5px;
     margin: 5px;
+    margin-top: 10px;
+    border-radius: 6px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 50px;
 
-
-    
+    text-decoration: none;
+    color: white; 
 }
 
 

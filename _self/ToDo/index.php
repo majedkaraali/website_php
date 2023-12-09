@@ -20,6 +20,7 @@
                 
                 <p>Your gateway to a more organized and accomplished life, bridging the gap between work and relaxation.</p>
             </div>
+            
 
 
             <div class="login-sec">
