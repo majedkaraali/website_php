@@ -3,7 +3,7 @@
    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  href="res/css/dashboard.css">
+    <link rel="stylesheet"  href="..\res\css\dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Dashboard</title>
@@ -25,7 +25,7 @@
 
             <li class="profile" >
                 <div class="img-box">
-                    <img src="res/img/default.png" alt="user photo " width="50px" height= "50px"> 
+                    <img src="../res/img/default.png" alt="user photo " width="50px" height= "50px"> 
                     <?php
                     $user_name="USS";
                     {
@@ -35,10 +35,8 @@
                         <?php
                     }?>
                    
-                    
                 </div> 
 
-                
             </li>
 
        
@@ -99,12 +97,9 @@
 
             </tr>
         </thead>
-
-     
-
         <?php
         session_start();
-        require("data_con.php");
+        require("../php/data_con.php");
         
         $user_id = $_SESSION['user_id'];
         $qr="SELECT * FROM todo_items WHERE user_id=$user_id and status!='Completed'";
@@ -123,10 +118,7 @@
             <td><?=$val['due_date'] ?></td>
             <td><?=$val['status'] ?></td>
             <td><button>Done</button></td>
-   
             </tr>
-
-
             <?php
            }
         }
@@ -156,7 +148,7 @@
 
         <?php
      
-        require("data_con.php");
+        require("../php/data_con.php");
         
         $user_id = $_SESSION['user_id'];
         $qr="SELECT * FROM todo_items WHERE user_id=$user_id and status='Completed' ";

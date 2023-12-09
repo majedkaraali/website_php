@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user_password = $_POST['password'];
     $hashedPassword = password_hash($user_password, PASSWORD_DEFAULT);
     
-    require('data_con.php');
+    require('php/data_con.php');
 
 
     $stmt = $conn->prepare("INSERT INTO users (user_Email, user_Password) VALUES (?, ?)");

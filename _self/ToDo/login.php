@@ -16,7 +16,7 @@
 
 <?php
 
-require('data_con.php');
+require('php/data_con.php');
 
 
 
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $user_id = $_SESSION['user_id'];
 
             echo"YES";
-            header("Location: dashboard.php");
+            header("Location: user/dashboard.php");
             echo"$user_id";
             exit();
         } else {
