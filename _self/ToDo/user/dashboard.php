@@ -44,28 +44,28 @@
             <li>
                 <a href="#" >
                 <i class="fa fa-home"></i>
-                    Dashboard
+                    <span>Dashboard</span>
                 </a>
             </li>
             <li>
                 <a href="#" >
                     <i class="fa fa-star"></i>
                     
-                    Important
+                    <span>Important</span>
                 </a>
             </li>
             <li>
                 <a href="#" >
                     <i class="fa fa-calendar"></i>
                     
-                    Planned
+                    <span>Planned</span>
                 </a>
             </li>
             <li>
                 <a href="#" >
                 <i class="fa fa-sticky-note" aria-hidden="true"></i>
                     
-                    Tasks
+                    <span>Tasks</span>
                 </a>
             </li>
   
@@ -99,19 +99,14 @@
         </thead>
         <?php
         session_start();
-        require("../php/data_con.php");
+        
+        require("../php/func.php");
         
         $user_id = $_SESSION['user_id'];
         $qr="SELECT * FROM todo_items WHERE user_id=$user_id and status!='Completed'";
-        $qr_run=mysqli_query($conn,$qr);
-
-        if (!$qr_run) {
-            die("Query failed: " . mysqli_error($conn));
-        }
-
+        $qr_run=get_record("todo_items",$qr);
         if (mysqli_num_rows($qr_run)>0){
            foreach ($qr_run as $val){
-            
             ?>
             <tr class="item">
             <td><?=$val['task'] ?></td>
@@ -122,11 +117,7 @@
             <?php
            }
         }
-
         ?>
-    
-    
-      
     </table>
     
 
@@ -148,16 +139,11 @@
 
         <?php
      
-        require("../php/data_con.php");
         
-        $user_id = $_SESSION['user_id'];
-        $qr="SELECT * FROM todo_items WHERE user_id=$user_id and status='Completed' ";
-        $qr_run=mysqli_query($conn,$qr);
-
-        if (!$qr_run) {
-            die("Query failed: " . mysqli_error($conn));
-        }
-
+      
+        $qr="SELECT * FROM todo_items WHERE user_id=$user_id and status='Completed'";
+        $qr_run=get_record("todo_items",$qr);
+        
         if (mysqli_num_rows($qr_run)>0){
            foreach ($qr_run as $val){
             
