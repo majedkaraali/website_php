@@ -30,7 +30,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" >
+                <a href="planned.php" >
                     <i class="fa fa-calendar"></i>
                     
                     <span>Planned</span>
