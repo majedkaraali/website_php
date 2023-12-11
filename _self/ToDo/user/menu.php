@@ -1,4 +1,4 @@
-<div class="mmenu">
+<div class="menu">
     
         <ul>
             <li class="profile" >

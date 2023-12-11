@@ -23,61 +23,6 @@
     </div>
 
 
-    <div class="head-box">
-        <h1>Dashboard</h1>
-    </div>
-
-
-    <div class="head-box">
-        <h1>Dashboard</h1>
-    </div>
-
-
-    <div class="head-box">
-        <h1>Dashboard</h1>
-    </div>
-
-
-    <div class="head-box">
-        <h1>Dashboard</h1>
-    </div>
-
-
-    <div class="head-box">
-        <h1>Dashboard</h1>
-    </div>
-
-
-    <div class="head-box">
-        <h1>Dashboard</h1>
-    </div>
-
-
-    <div class="head-box">
-        <h1>Dashboard</h1>
-    </div>
-
-
-    <div class="head-box">
-        <h1>Dashboard</h1>
-    </div>
-
-
-    <div class="head-box">
-        <h1>Dashboard</h1>
-    </div>
-
-
-    <div class="head-box">
-        <h1>Dashboard</h1>
-    </div>
-
-
-    <div class="head-box">
-        <h1>Dashboard</h1>
-    </div>
-
-
     <div class="sect">
         <div class="box"><span>Completed Tasks:2</span></div>
         <div class="box"><span>Pending Tasks:8</span></div>
