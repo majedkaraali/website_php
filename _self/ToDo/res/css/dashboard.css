@@ -35,7 +35,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 10%;
+
 
 }
 
@@ -150,17 +150,21 @@ ul{
  
 .input-list{
     display: none;
+   
 }
 
 .input-list a{
-    background-color: rgb(247, 159, 104);
-    color: green;
+    background-color: rgb(87, 83, 71);
+    color: rgb(0, 255, 0);
+    font-size: medium;
 }
 input{
-
-    width: 75%;
-    height: 90%;
+    width: 60%;
+    height: 100%;
     border-radius: 6px;
+    border: none;
+    background-color: rgb(87, 83, 71);
+
 
 }
 
