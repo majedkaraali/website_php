@@ -22,15 +22,25 @@
         <h1>Dashboard</h1>
     </div>
 
+
+    <div class="sect">
+        <div class="box"><span>Completed Tasks:2</span></div>
+        <div class="box"><span>Pending Tasks:8</span></div>
+        <div class="box"><span>Today Tasks:5</span></div>
+        <div class="box"><span>Loren Tasks:24</span></div>
+    </div>
+
     <div class="head-box">
         <h1>Going Tasks</h1>
     </div>
+
+
+    
 
     <table class="task" >
         <thead>             
             <tr>
                 <th>TASK</th>
-                <th>DATE</th>
                 <th>STATUS</th>
 
             </tr>
@@ -48,7 +58,7 @@
             ?>
             <tr class="item">
             <td><?=$val['task'] ?></td>
-            <td><?=$val['due_date'] ?></td>
+           
             <td><?=$val['status'] ?></td>
             <td><button>Done</button></td>
             </tr>
@@ -68,7 +78,6 @@
         <thead>             
             <tr>
                 <th>TASK</th>
-                <th>DATE</th>
                 <th>STATUS</th>
             </tr>
         </thead>
@@ -88,7 +97,6 @@
             ?>
             <tr>
             <td><?=$val['task'] ?></td>
-            <td><?=$val['due_date'] ?></td>
             <td><?=$val['status'] ?></td>
             <td><button>Redo</button></td>
    
