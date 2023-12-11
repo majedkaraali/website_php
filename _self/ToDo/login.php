@@ -36,6 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (password_verify($user_password, $row['user_Password'])) {
             session_start();
             $_SESSION['user_id'] = $row['user_ID'];
+            $_SESSION['user_name'] = $row['user_Name'];
             $user_id = $_SESSION['user_id'];
 
             echo"YES";

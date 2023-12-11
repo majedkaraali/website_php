@@ -35,12 +35,13 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-bottom: 10%;
 
 }
 
 
 .board{
-   
+    padding-bottom: 0%;
     width: 75%;
     margin: 5px;
     min-height: 100vh;
@@ -88,10 +89,21 @@ ul{
 }
 
 .profile{
-
     margin-bottom: 50px;
 }
 
+.new-list a{
+    background-color: rgb(43, 155, 43);
+}
+
+.log-out{
+    justify-self: flex-end
+}
+
+.log-out a{
+    background-color: maroon;
+
+}
 
 ul li a:hover{
     color: rgb(27, 15, 15); 

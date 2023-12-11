@@ -46,8 +46,7 @@
             </tr>
         </thead>
         <?php
-        session_start();
-        
+       
         require("../php/func.php");
         
         $user_id = $_SESSION['user_id'];
