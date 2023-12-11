@@ -92,8 +92,22 @@ ul{
     margin-bottom: 50px;
 }
 
-.new-list a{
+
+.new-list{
+    padding-left: 5px ;
+}
+
+.new-list button{
+    width: 100%;
+    height: 40px;
     background-color: rgb(43, 155, 43);
+    border: none;
+    border-radius: 6px;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    
+    
 }
 
 .log-out{
@@ -102,6 +116,22 @@ ul{
 
 .log-out a{
     background-color: maroon;
+
+}
+ 
+.input-list{
+    display: none;
+}
+
+.input-list a{
+    background-color: rgb(247, 159, 104);
+    color: green;
+}
+input{
+
+    width: 75%;
+    height: 90%;
+    border-radius: 6px;
 
 }
 

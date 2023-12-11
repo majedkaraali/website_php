@@ -49,18 +49,31 @@
             </li>
 
 
-            <li class="new-list">
-                <a href="#" >
-                <i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
+            
 
-                    
-                    <span>Create new List</span>
+
+            <li class="input-list" id="input-list">
+           
+
+
+                
+                <a  href="#">
+                <input   placeholder="List name" type="text">
+                Create
                 </a>
+            </li>
+
+            <li class="new-list">
+                <button  onclick="toggleForm()"> 
+                    <i class="fa fa-calendar-plus-o" aria-hidden="true"> 
+                        <span>Create new List</span>
+                    </i>
+                </button>
             </li>
 
             <li class="log-out">
                 
-                <a href="#" >
+                <a href="../logut.php" >
                     <i class="fa fa-sign-out" aria-hidden="true"></i>
 
                     <span>Log Out</span>
@@ -72,3 +85,10 @@
 
         </ul>
     </div>
+
+<script>
+  function toggleForm() {
+    var form = document.getElementById("input-list");
+    form.style.display = (form.style.display === "none") ? "block" : "none";
+  }
+</script>
