@@ -53,18 +53,16 @@
 
 
             <li class="input-list" id="input-list">
-           
-
-
-                
                 <a  href="#">
+                <i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
+                    
                 <input   placeholder="List name" type="text">
-                <button class="create" id="3">Create</button>
+                <button class="create" id="create">Create</button>
                 </a>
             </li>
 
-            <li class="new-list">
-                <button  onclick="toggleForm()"> 
+            <li class="new-list" id="new-list">
+                <button  id="new" onclick="toggleForm()"> 
                     <i class="fa fa-calendar-plus-o" aria-hidden="true"> 
                         
                     </i>
@@ -94,8 +92,10 @@
 
 <script>
     function toggleForm() {
-    var form = document.getElementById("input-list");
-      var button = document.querySelector("button");
+      var form = document.getElementById("input-list");
+
+      var button = document.getElementById("new");
+
 
       if (form.style.display === "none" || form.style.display === ""){
         form.style.display = "block";

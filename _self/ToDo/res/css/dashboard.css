@@ -155,7 +155,7 @@ ul{
 
 .input-list a{
     background-color: rgb(87, 83, 71);
-    color: rgb(0, 255, 0);
+    gap: 20px;
     font-size: medium;
 }
 input{
@@ -165,6 +165,11 @@ input{
     border: none;
     background-color: rgb(87, 83, 71);
 
+
+}
+
+.input-list button{
+    padding: 4px;
 
 }
 
