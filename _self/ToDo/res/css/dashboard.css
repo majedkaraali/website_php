@@ -17,6 +17,7 @@
 
 
 body{
+
     height: 100vh;
     display: flex;
     justify-content: space-between;
@@ -29,19 +30,11 @@ body{
     top: 0;
     width: 25%;
     padding: 20px;
-    height: 400px;
+    min-height: 100vh;
     background-color: rgb(247, 159, 104);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    flex-grow: 1;
-    
-    
-
-    
-
-
 
 }
 
@@ -50,12 +43,13 @@ body{
    
     width: 75%;
     margin: 5px;
-    height: 100vh;
+    min-height: 100vh;
     background-color:white;
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
+ 
    
 }
 
@@ -116,12 +110,13 @@ ul li a:hover{
 .sect .box{
     width: 200px;
     height: 200px;
-    background-color: rgb(31, 51, 25);
+    background-color: rgb(187, 196, 184);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     border-radius: 5px;
+    
 }
 
 
