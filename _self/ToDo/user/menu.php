@@ -68,18 +68,21 @@
                     <i class="fa fa-calendar-plus-o" aria-hidden="true"> 
                         
                     </i>
-                    <span>Create new List</span>
+                    <span>New List</span>
                 </button>
             </li>
 
-            <li class="log-out">
-                
-                <a href="../logut.php" >
-                    <i class="fa fa-sign-out" aria-hidden="true"></i>
 
-                    <span>Log Out</span>
-                </a>
+            <li class="log-out">
+                <button  onclick="toggleForm()"> 
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        
+               
+                    <span>Log out</span>
+                </button>
             </li>
+
+           
 
 
             
@@ -87,9 +90,21 @@
         </ul>
     </div>
 
+
+
 <script>
-  function toggleForm() {
+    function toggleForm() {
     var form = document.getElementById("input-list");
-    form.style.display = (form.style.display === "none") ? "block" : "none";
-  }
-</script>
+      var button = document.querySelector("button");
+
+      if (form.style.display === "none" || form.style.display === ""){
+        form.style.display = "block";
+        button.innerHTML = '<i class="fa fa-calendar-minus-o" aria-hidden="true"></i> Cancel';
+        button.style.backgroundColor = "maroon"; 
+      } else {
+        form.style.display = "none";
+        button.innerHTML = '<i class="fa fa-calendar-plus-o" aria-hidden="true"></i> New List';
+        button.style.backgroundColor = "rgb(43, 155, 43)";
+      }
+    }
+  </script>
