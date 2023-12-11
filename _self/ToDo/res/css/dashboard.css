@@ -29,12 +29,14 @@ body{
     top: 0;
     width: 25%;
     padding: 20px;
+    height: 400px;
     background-color: rgb(247, 159, 104);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
+
     flex-grow: 1;
+    
     
 
     
@@ -114,7 +116,7 @@ ul li a:hover{
 .sect .box{
     width: 200px;
     height: 200px;
-    background-color: rgb(83, 224, 41);
+    background-color: rgb(31, 51, 25);
     display: flex;
     align-items: center;
     justify-content: center;
