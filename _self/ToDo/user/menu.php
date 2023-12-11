@@ -72,7 +72,7 @@
 
 
             <li class="log-out">
-                <button  onclick="toggleForm()"> 
+                <button  onclick="logout()"> 
                     <i class="fa fa-sign-out" aria-hidden="true"></i>
                         
                
@@ -106,5 +106,10 @@
         button.innerHTML = '<i class="fa fa-calendar-plus-o" aria-hidden="true"></i> New List';
         button.style.backgroundColor = "rgb(43, 155, 43)";
       }
+    }
+
+
+    function logout() {
+      window.location.href = '../logout.php';
     }
   </script>
