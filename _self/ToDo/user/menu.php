@@ -110,6 +110,6 @@
 
 
     function logout() {
-      window.location.href = '../logout.php';
+      window.location.href = '../logut.php';
     }
   </script>
