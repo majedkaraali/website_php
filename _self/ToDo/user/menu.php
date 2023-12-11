@@ -66,8 +66,9 @@
             <li class="new-list">
                 <button  onclick="toggleForm()"> 
                     <i class="fa fa-calendar-plus-o" aria-hidden="true"> 
-                        <span>Create new List</span>
+                        
                     </i>
+                    <span>Create new List</span>
                 </button>
             </li>
 

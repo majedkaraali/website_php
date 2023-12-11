@@ -106,18 +106,19 @@ ul{
     font-size: medium;
     display: flex;
     align-items: center;
-    
-    
+    padding: 5px;
+    margin: 5px;
+    gap: 50px;
+    color: white;
+   
 }
 
-.log-out{
-    justify-self: flex-end
+.new-list button:hover{
+    color: rgb(27, 15, 15); 
+    background-color: rgb(170, 164, 145);
+    transition: background-color 0.4s ease;
 }
 
-.log-out a{
-    background-color: maroon;
-
-}
  
 .input-list{
     display: none;
@@ -132,6 +133,15 @@ input{
     width: 75%;
     height: 90%;
     border-radius: 6px;
+
+}
+
+.log-out{
+    justify-self: flex-end
+}
+
+.log-out a{
+    background-color: maroon;
 
 }
 
