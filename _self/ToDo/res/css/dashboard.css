@@ -74,9 +74,14 @@ html, body {
 
 .board .head-box{
     background-color: rgb(252, 157, 79);
-    border-radius: 5px;
+    border-radius: 7px;
     padding: 5px;
     width: 100%;
+
+}
+
+.board h1{
+    padding-left: 4%;
 
 }
 
@@ -106,6 +111,20 @@ tr{
     padding: 5px;
 }
 
+.task .done {
+    background-color: rgb(50, 206, 50);
+    padding: 7px;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.task .done:hover {
+    background-color: rgb(57, 146, 61);
+    transform: rotate(-15deg);
+}
+
+
 ul{
     list-style: none;
 }
@@ -121,7 +140,9 @@ ul{
 
 }
 
-
+.footer{
+    height: 200px;
+    background-color:aqua}
 
 .new-list button{
     width: 100%;

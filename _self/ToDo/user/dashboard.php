@@ -59,7 +59,7 @@
             <td><?=$val['task'] ?></td>
            
             <td><?=$val['status'] ?></td>
-            <td><button>Done</button></td>
+            <td><button class="done">Done</button></td>
             </tr>
             <?php
            }
@@ -111,6 +111,8 @@
     
       
     </table>
+
+ 
     </div>
 
 
