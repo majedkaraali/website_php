@@ -61,7 +61,7 @@ html, body {
 
 
 .board .head-box{
-    background-color: rgba(172, 104, 3, 0.836);
+    background-color: rgb(247, 159, 104);
     border-radius: 7px;
     padding: 5px;
     width: 100%;
@@ -129,7 +129,7 @@ ul{
 }
 
 .footer{
-    height: 200px;
+    height: 300px;
     background-color:aqua}
 
 .new-list button{

@@ -112,6 +112,10 @@
       
     </table>
 
+    <div class="footer">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magnam animi, corporis saepe aut sit recusandae culpa ipsum consectetur soluta maiores quis earum unde possimus aliquam illo suscipit veniam quisquam?</p>
+    </div>
+
  
     </div>
 
