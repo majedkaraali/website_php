@@ -100,7 +100,7 @@
       if (form.style.display === "none" || form.style.display === ""){
         form.style.display = "block";
         button.innerHTML = '<i class="fa fa-calendar-minus-o" aria-hidden="true"></i> Cancel';
-        button.style.backgroundColor = "maroon"; 
+        button.style.backgroundColor = "rgb(233, 53, 53)"; 
       } else {
         form.style.display = "none";
         button.innerHTML = '<i class="fa fa-calendar-plus-o" aria-hidden="true"></i> New List';
