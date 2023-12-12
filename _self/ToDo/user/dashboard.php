@@ -30,6 +30,8 @@
         <div class="box"><span>Loren Tasks:24</span></div>
     </div>
 
+    div.
+
     <div class="head-box">
         <h1>Going Tasks</h1>
     </div>
