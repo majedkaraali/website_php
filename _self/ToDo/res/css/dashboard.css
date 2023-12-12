@@ -16,19 +16,7 @@
 }
 
 
-body{
 
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    
-}
-
-* {
-    padding: 0;
-    margin: 0;
-}
 
 body {
     height: 100vh;
@@ -73,7 +61,7 @@ html, body {
 
 
 .board .head-box{
-    background-color: rgb(252, 157, 79);
+    background-color: rgba(172, 104, 3, 0.836);
     border-radius: 7px;
     padding: 5px;
     width: 100%;
@@ -233,17 +221,28 @@ ul li a:hover{
     justify-content: space-around;
 }
 
-.sect .box{
+.sect .box {
     width: 200px;
     height: 200px;
-    background-color: rgb(187, 196, 184);
+    background-color: #ffcc66; 
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    border-radius: 5px;
-    
+    border-radius: 10px;
+    color: #333; 
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    background: linear-gradient(45deg, #ffcc66, #ff9966); 
+
+    transition: background 0.3s ease-in-out;
 }
+
+.sect .box:hover {
+    background: linear-gradient(45deg, #ff9966, #ffcc66); 
+}
+
 
 
 ul li a{
