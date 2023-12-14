@@ -16,7 +16,12 @@
 
 
 <script>
-        document.getElementById("pr").innerHTML="icerik";
+        document.getElementById("pr").innerHTML=5+6;
+       
+        var x,z;
+        let a,b=6;
+        a=55;
+        alert(a);
 </script>
 
 

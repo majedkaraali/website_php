@@ -87,6 +87,7 @@ tr{
 
 .task{
     width: 100%;
+    margin-bottom: 50px;
     border-collapse: collapse;
     background-color: rgb(161, 158, 137);
     border-radius: 5px;
