@@ -7,6 +7,7 @@ else {
 	$_SESSION['email'];
 	
 }
+
 ?>
 <!DOCTYPE>
 <html>
