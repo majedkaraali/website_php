@@ -38,7 +38,7 @@
 
           
 
-            <form  action="../php/insert.php" method="post" onsubmit="submitForm(event)">
+            <form  action="../php/insert.php" method="post" >
                 <label for="tname">Task</label>
                 <input type="text" id="tname" name="tname">
                 <br>
@@ -48,15 +48,17 @@
                 <label for="tlist">Tag</label>
                 <select name="tlist" id="tlist">
                     <option value="Imprtant">Imprtant</option>
-                    <option value="Imprtant">Planned</option>
-                    <option value="Imprtant">Tasks</option>
+                    <option value="Planned">Planned</option>
+                    <option value="Tasks">Tasks</option>
                 </select>
-               
+                <input class="add_task" type="submit" >
+                
             </form>
 
             <div class="btns">
-                <button class="add" id='add_new' onclick="add_task()">Add task</button>
-                <button  class="cancel" id='cancel' onclick="canceltogg()">Cancel</button>
+                
+                <button class="cancel" id="cancel" onclick="canceltogg()">Cancel</button>
+                
            
 
             </div>
@@ -190,23 +192,7 @@
        
     }
 
-    function submitForm(event) {
-        event.preventDefault(); // Prevent the default form submission
 
-        // Fetch API to send form data to insert.php
-        fetch('../php/insert.php', {
-            method: 'POST',
-            body: new FormData(event.target),
-        })
-        .then(response => {
-            // Handle the response if needed
-            console.log(response);
-        })
-        .catch(error => {
-            // Handle errors if any
-            console.error('Error:', error);
-        });
-    }
 
 </script>
 

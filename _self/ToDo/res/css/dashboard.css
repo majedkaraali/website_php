@@ -167,22 +167,26 @@ ul{
     display: flex;
     gap: 15px;
     font-size: large;
-    background-color: #ff9966;
+    align-items: center;
+   
 }
 
 .new_task select{
-    background-color: rgb(28, 73, 73);
+    background-color: rgb(232, 235, 190);
     padding: 8px;
     border-radius: 5px;
 }
+
 
 .new_task .btns{
     display: flex;
     gap: 20px;
 }
 
-.new_task .add{
-    padding: 8px;
+.new_task .add_task{
+    padding: 10px;
+    background-color: limegreen;
+    font-size: larger;
 }
 .new_task .cancel{
     padding: 8px;
@@ -191,7 +195,7 @@ ul{
 
 
 .new_task input{
-    background-color: rgb(28, 73, 73);
+    background-color: rgb(232, 235, 190);
     padding: 8px;
 }
 
