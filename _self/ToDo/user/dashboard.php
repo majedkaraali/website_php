@@ -47,9 +47,9 @@
                 <br>
                 <label for="tlist">Tag</label>
                 <select name="tlist" id="tlist">
-                    <option value="Imprtant">Imprtant</option>
-                    <option value="Planned">Planned</option>
-                    <option value="Tasks">Tasks</option>
+                    <option value="important_items">Imprtant</option>
+                    <option value="planned_items">Planned</option>
+                    <option value="task_items">Tasks</option>
                 </select>
                 <input class="add_task" type="submit" >
                 
