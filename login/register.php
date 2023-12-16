@@ -36,6 +36,8 @@ E-mail:<input type="email" name="email"  ><br>
 <input type="submit" name="submitdata">
 </form>
 
+
+
 </body>
 </html>
 <?php } ?>
