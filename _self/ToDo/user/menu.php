@@ -62,7 +62,7 @@
             </li>
 
             <li class="new-list" id="new-list">
-                <button  id="new" onclick="toggleForm()"> 
+                <button  id="new_list" onclick="toggleForm()"> 
                     <i class="fa fa-calendar-plus-o" aria-hidden="true"> 
                         
                     </i>
@@ -94,7 +94,7 @@
     function toggleForm() {
       var form = document.getElementById("input-list");
 
-      var button = document.getElementById("new");
+      var button = document.getElementById("new_list");
 
 
       if (form.style.display === "none" || form.style.display === ""){

@@ -32,26 +32,42 @@
 
     <div class="new_task">
 
-        <button class="new_btn" id="new_btn">New Task</button>
+        <button class="new_btn" id="new_btn" onclick="toggle_new()">New Task</button>
 
-        <div class="new">
+        <div class="new" id="new">
 
-            <form  action="../php/insert.php" method="post"></form>
-            <label for="tname">Task</label>
-            <input type="text" id="tname" name="tname">
+            <div class="formm" id=formm>
+
+                <form  action="../php/insert.php" method="post"></form>
+                <label for="tname">Task</label>
+                <input type="text" id="tname" name="tname">
+        
+                <label for="tdate">Date</label>
+                <input type="date" type="hidden" id="tdate" name="tdate">
+                <label for="tlist">Tag</label>
+          
+
+
+                <select name="tlist" id="tlist">
+                    <option value="Imprtant">Imprtant</option>
+                    <option value="Imprtant">Planned</option>
+                    <option value="Imprtant">Tasks</option>
+                </select>
+
+            </div>
+
+            <div class="btns">
+                <button class="add" id='add_new'>Add task</button>
+                <button  class="cancel" id='cancel' onclick="canceltogg()">Cancel</button>
+           
+
+            </div>
     
-            <label for="tdate">Date</label>
-            <input type="date" type="hidden" id="tdate" name="tdate">
-            <label for="tlist">Tag</label>
-
-            <select name="tlist" id="tlist">
-                <option value="Imprtant">Imprtant</option>
-                <option value="Imprtant">Planned</option>
-                <option value="Imprtant">Tasks</option>
-            </select>
         </div>
+
          
     </div>
+    
 
     <div class="head-box">
         <h1>Going Tasks</h1>
@@ -143,6 +159,43 @@
 </body>
 
 <script>
+    
+    function toggle_new() {
+   
+        var form = document.getElementById("new");
+
+        var button = document.getElementById("new_btn");
+
+    
+        if (form.style.display === "none" || form.style.display === ""){
+        form.style.display = "flex";
+        button.style.display="none"
+       } 
+
+
+      else {
+        form.style.display = "none";
+      }
+    }
+ 
+  
+    function canceltogg() {
+        var form = document.getElementById("new");
+
+        var button = document.getElementById("new_btn");
+
+
+        if (form.style.display === "none" || form.style.display === ""){
+            form.style.display = "flex";
+        } 
+
+
+        else {
+            form.style.display = "none";
+            button.style.display="block"
+        }
+        
+    }
 
 </script>
 
