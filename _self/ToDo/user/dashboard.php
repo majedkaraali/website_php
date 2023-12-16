@@ -31,7 +31,26 @@
     </div>
 
     <div class="new_task">
-        
+
+        <button class="new_btn" id="new_btn">New Task</button>
+
+        <div class="new">
+
+            <form  action="../php/insert.php" method="post"></form>
+            <label for="tname">Task</label>
+            <input type="text" id="tname" name="tname">
+    
+            <label for="tdate">Date</label>
+            <input type="date" type="hidden" id="tdate" name="tdate">
+            <label for="tlist">Tag</label>
+
+            <select name="tlist" id="tlist">
+                <option value="Imprtant">Imprtant</option>
+                <option value="Imprtant">Planned</option>
+                <option value="Imprtant">Tasks</option>
+            </select>
+        </div>
+         
     </div>
 
     <div class="head-box">
@@ -122,6 +141,11 @@
 
 
 </body>
+
+<script>
+
+</script>
+
 </html>
 
 
