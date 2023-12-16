@@ -27,7 +27,7 @@
         <div class="box"><span>Completed Tasks:2</span></div>
         <div class="box"><span>Pending Tasks:8</span></div>
         <div class="box"><span>Today Tasks:5</span></div>
-        <div class="box"><span>Loren Tasks:24</span></div>
+        <div class="box"><span>Missing Tasks:24</span></div>
     </div>
 
     <div class="new_task">
@@ -36,28 +36,26 @@
 
         <div class="new" id="new">
 
-            <div class="formm" id=formm>
-
-                <form  action="../php/insert.php" method="post"></form>
-                <label for="tname">Task</label>
-                <input type="text" id="tname" name="tname">
-        
-                <label for="tdate">Date</label>
-                <input type="date" type="hidden" id="tdate" name="tdate">
-                <label for="tlist">Tag</label>
           
 
-
+            <form  action="../php/insert.php" method="post" onsubmit="submitForm(event)">
+                <label for="tname">Task</label>
+                <input type="text" id="tname" name="tname">
+                <br>
+                <label for="tdate">Date</label>
+                <input type="date" type="hidden" id="tdate" name="tdate">
+                <br>
+                <label for="tlist">Tag</label>
                 <select name="tlist" id="tlist">
                     <option value="Imprtant">Imprtant</option>
                     <option value="Imprtant">Planned</option>
                     <option value="Imprtant">Tasks</option>
                 </select>
-
-            </div>
+               
+            </form>
 
             <div class="btns">
-                <button class="add" id='add_new'>Add task</button>
+                <button class="add" id='add_new' onclick="add_task()">Add task</button>
                 <button  class="cancel" id='cancel' onclick="canceltogg()">Cancel</button>
            
 
@@ -161,40 +159,53 @@
 <script>
     
     function toggle_new() {
-   
         var form = document.getElementById("new");
-
         var button = document.getElementById("new_btn");
 
-    
         if (form.style.display === "none" || form.style.display === ""){
         form.style.display = "flex";
         button.style.display="none"
        } 
 
-
       else {
         form.style.display = "none";
       }
     }
- 
   
     function canceltogg() {
         var form = document.getElementById("new");
-
         var button = document.getElementById("new_btn");
-
 
         if (form.style.display === "none" || form.style.display === ""){
             form.style.display = "flex";
         } 
-
-
         else {
             form.style.display = "none";
             button.style.display="block"
         }
-        
+    }
+
+    function add_task(){
+        document.querySelector('form').submit();
+       
+    }
+
+    function submitForm(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Fetch API to send form data to insert.php
+        fetch('../php/insert.php', {
+            method: 'POST',
+            body: new FormData(event.target),
+        })
+        .then(response => {
+            // Handle the response if needed
+            console.log(response);
+        })
+        .catch(error => {
+            // Handle errors if any
+            console.error('Error:', error);
+        });
     }
 
 </script>

@@ -163,10 +163,11 @@ ul{
     font-size: larger;
     margin-top: 30px
 }
-.new_task .new .formm{
+.new_task .new form{
     display: flex;
     gap: 15px;
     font-size: large;
+    background-color: #ff9966;
 }
 
 .new_task select{
