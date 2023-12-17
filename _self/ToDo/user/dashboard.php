@@ -32,13 +32,13 @@
 
     <div class="new_task">
 
-        <button class="new_btn" id="new_btn" onclick="toggle_new()">New Task</button>
+        <button class="new_btn" id="new_btn" onclick="toggle_new() ">New Task</button>
 
         <div class="new" id="new">
 
           
 
-            <form  action="../php/insert.php" method="post" >
+            <form  action="../php/insert.php" method="post" onsubmit="submitForm(event)">
                 <label for="tname">Task</label>
                 <input type="text" id="tname" name="tname">
                 <br>
@@ -47,9 +47,9 @@
                 <br>
                 <label for="tlist">Tag</label>
                 <select name="tlist" id="tlist">
-                    <option value="important_items">Imprtant</option>
-                    <option value="planned_items">Planned</option>
-                    <option value="task_items">Tasks</option>
+                    <option value="important">Imprtant</option>
+                    <option value="planned">Planned</option>
+                    <option value="task">Tasks</option>
                 </select>
                 <input class="add_task" type="submit" >
                 
@@ -70,7 +70,7 @@
     
 
     <div class="head-box">
-        <h1>Going Tasks</h1>
+        <h1>Recent  tasks</h1>
     </div>
 
 
@@ -81,6 +81,7 @@
             <tr>
                 <th>TASK</th>
                 <th>STATUS</th>
+                <th>TAG</th>
 
             </tr>
         </thead>
@@ -89,16 +90,19 @@
         require("../php/func.php");
         
         $user_id = $_SESSION['user_id'];
-        $qr="SELECT * FROM todo_items WHERE user_id=$user_id and status!='Completed'";
-        $qr_run=get_record("todo_items",$qr);
+        $qr="SELECT * FROM common_tasks WHERE user_id=$user_id and status!='done'";
+        $qr_run=get_record("common_tasks",$qr);
         if (mysqli_num_rows($qr_run)>0){
            foreach ($qr_run as $val){
             ?>
             <tr class="item">
-            <td><?=$val['task'] ?></td>
+            <td><?=$val['task_name'] ?></td>
            
             <td><?=$val['status'] ?></td>
+
+            <td><?=$val['list_tag']?></td>
             <td><button class="done">Done</button></td>
+
             </tr>
             <?php
            }
@@ -126,15 +130,15 @@
      
         
       
-        $qr="SELECT * FROM todo_items WHERE user_id=$user_id and status='Completed'";
-        $qr_run=get_record("todo_items",$qr);
+        $qr="SELECT * FROM common_tasks WHERE user_id=$user_id and status='done'";
+        $qr_run=get_record("common_tasks",$qr);
         
         if (mysqli_num_rows($qr_run)>0){
            foreach ($qr_run as $val){
             
             ?>
             <tr>
-            <td><?=$val['task'] ?></td>
+            <td><?=$val['task_name'] ?></td>
             <td><?=$val['status'] ?></td>
             <td><button>Redo</button></td>
    
@@ -159,6 +163,21 @@
 </body>
 
 <script>
+    function submitForm(event) {
+        event.preventDefault(); 
+
+        fetch('../php/insert.php', {
+            method: 'POST',
+            body: new FormData(event.target),
+        })
+        .then(response => {
+
+            console.log(response);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
     
     function toggle_new() {
         var form = document.getElementById("new");
@@ -193,8 +212,18 @@
     }
 
 
+    window.onload = function () {
+    window.scrollTo (0, 0);
+  }
+
+
 
 </script>
+
+<script>
+  history.scrollRestoration = "manual";
+</script>
+
 
 </html>
 

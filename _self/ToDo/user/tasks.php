@@ -20,7 +20,7 @@
 
     <div class="board">
         <div class="head-box">
-            <h1>Important</h1>
+            <h1>To do Tasks</h1>
         </div>
 
    
@@ -29,7 +29,6 @@
         <thead>             
             <tr>
                 <th>TASK</th>
-                <th>DATE</th>
                 <th>STATUS</th>
             </tr>
         </thead>
@@ -41,18 +40,18 @@
         $user_id = $_SESSION['user_id'];
         
       
-        $qr="SELECT * FROM task_items WHERE user_id=$user_id and item_status!='Completed'";
-        $qr_run=get_record("task_items",$qr);
+        $qr="SELECT * FROM common_tasks WHERE user_id=$user_id and status!='done'";
+        $qr_run=get_record("common_tasks",$qr);
         
         if (mysqli_num_rows($qr_run)>0){
            foreach ($qr_run as $val){
             
             ?>
             <tr>
-            <td><?=$val['task'] ?></td>
-            <td><?=$val['item_date'] ?></td>
-            <td><?=$val['item_status'] ?></td>
-            <td><button>Redo</button></td>
+            <td><?=$val['task_name'] ?></td>
+            <td><?=$val['status'] ?></td>
+            <td><button class="done">Done</button></td>
+            
    
             </tr>
 
