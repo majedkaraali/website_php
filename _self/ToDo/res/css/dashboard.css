@@ -184,9 +184,9 @@ ul{
 }
 
 .new_task .add_task{
-    padding: 10px;
+ 
     background-color: limegreen;
-    font-size: larger;
+    font-size: large;
 }
 .new_task .cancel{
     padding: 8px;

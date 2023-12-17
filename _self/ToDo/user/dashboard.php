@@ -206,10 +206,10 @@
         }
     }
 
-    function add_task(){
+    /*function add_task(){
         document.querySelector('form').submit();
        
-    }
+    }*/
 
 
     window.onload = function () {

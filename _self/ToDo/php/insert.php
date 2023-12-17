@@ -10,9 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user_id = $_SESSION['user_id'];
 
 
-    $qr="INSERT INTO common_tasks (task_id,user_id,task_name,status,list_tag,important,creation_date) VALUES (NULL,'$user_id','$tname','pending','$tlist_tag','1', current_timestamp());";
-    $qr_run=mysqli_query($conn,$qr);
-
+    $qr="INSERT INTO common_tasks (task_id,user_id,task_name,status,list_tag,important,creation_date) VALUES (NULL,'$user_id','$tname','pending','$tlist_tag','0', current_timestamp());";
+    
     if ($conn->query($qr) === TRUE) {
         echo "Record inserted successfully";
         echo $tlist_tag;
