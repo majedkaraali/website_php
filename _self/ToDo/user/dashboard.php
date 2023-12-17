@@ -37,24 +37,21 @@
         <div class="new" id="new">
 
           
-
-            <form  action="../php/insert.php" method="post" onsubmit="submitForm(event)">
+            <form action="../php/insert.php" method="post" onsubmit="submitForm(event)">
                 <label for="tname">Task</label>
-                <input type="text" id="tname" name="tname">
+                <input type="text" id="tname" name="tname" required>
                 <br>
-                <label for="tdate">Date</label>
-                <input type="date" type="hidden" id="tdate" name="tdate">
+                <label for="tdate" id="tdate_lbl" style="display:none;" >Date</label>
+                <input type="date" id="tdate" name="tdate" style="display:none;">
                 <br>
                 <label for="tlist">Tag</label>
-                <select name="tlist" id="tlist">
-                    <option value="important">Imprtant</option>
+                <select name="tlist" id="tlist" onchange="toggleDateInput()">
+                    <option value="important">Important</option>
                     <option value="planned">Planned</option>
                     <option value="task">Tasks</option>
                 </select>
-                <input class="add_task" type="submit" >
-                
+                <input class="add_task" type="submit">
             </form>
-
             <div class="btns">
                 
                 <button class="cancel" id="cancel" onclick="canceltogg()">Cancel</button>
@@ -174,6 +171,7 @@
         console.log(response);
         if (response.ok) {
             location.reload();
+            alert("Task added successfuly");
         }
     })
     .catch(error => {
@@ -207,6 +205,26 @@
             form.style.display = "none";
             button.style.display="block"
         }
+    }
+
+
+    function toggleDateInput() {
+        var tdate_lbl = document.getElementById('tdate_lbl');
+        var tlist = document.getElementById('tlist');
+        var tdate = document.getElementById('tdate');
+        
+       
+        tdate_lbl.style.display = tlist.value === 'planned' ? 'block' : 'none';
+
+        if (tlist.value === 'planned') {
+            tdate.style.display = 'block';
+            tdate.required = true;
+        } else {
+            tdate.style.display = 'none';
+            tdate.required = false;
+        }
+    
+
     }
 
     /*function add_task(){

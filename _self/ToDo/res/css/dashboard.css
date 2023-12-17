@@ -161,8 +161,27 @@ ul{
 .new_task .new_btn{
     padding: 20px;
     font-size: larger;
-    margin-top: 30px
+    margin-top: 30px;
+    background-color: limegreen;
+    border: none;
+    color: white;
+
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    
 }
+
+.new_btn:hover{
+    background-color: mediumseagreen;
+    transform: translateY(5px);
+}
+
 .new_task .new form{
     display: flex;
     gap: 15px;
@@ -187,7 +206,30 @@ ul{
  
     background-color: limegreen;
     font-size: large;
+    
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
+
+.add_task:hover {
+    background-color: #4CAF50;
+    transform: translateX(5px);
+}
+
+.add_task:active {
+    background-color: #4CAF50;
+    transform: translateY(5px);
+}
+
 .new_task .cancel{
     padding: 8px;
 }
