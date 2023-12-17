@@ -164,20 +164,23 @@
 
 <script>
     function submitForm(event) {
-        event.preventDefault(); 
+    event.preventDefault();
 
-        fetch('../php/insert.php', {
-            method: 'POST',
-            body: new FormData(event.target),
-        })
-        .then(response => {
+    fetch('../php/insert.php', {
+        method: 'POST',
+        body: new FormData(event.target),
+    })
+    .then(response => {
+        console.log(response);
+        if (response.ok) {
+            location.reload();
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
 
-            console.log(response);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-    }
     
     function toggle_new() {
         var form = document.getElementById("new");
