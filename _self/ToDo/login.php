@@ -24,19 +24,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user_email = $_POST['email'];
     $user_password = $_POST['pass'];
 
-    $stmt = $conn->prepare("SELECT * FROM users WHERE user_Email = ? LIMIT 1");
+    $stmt = $conn->prepare("SELECT * FROM users WHERE user_email = ? LIMIT 1");
     $stmt->bind_param("s", $user_email);
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
-        echo $row['user_Password'];
+        echo $row['user_password'];
 
-        if (password_verify($user_password, $row['user_Password'])) {
+        if (password_verify($user_password, $row['user_password'])) {
             session_start();
-            $_SESSION['user_id'] = $row['user_ID'];
-            $_SESSION['user_name'] = $row['user_Name'];
+            $_SESSION['user_id'] = $row['user_id'];
+            $_SESSION['user_name'] = $row['user_name'];
             $user_id = $_SESSION['user_id'];
 
             echo"YES";

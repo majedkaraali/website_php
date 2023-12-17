@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     require('php/data_con.php');
 
 
-    $stmt = $conn->prepare("INSERT INTO users (user_Email, user_Password) VALUES (?, ?)");
+    $stmt = $conn->prepare("INSERT INTO users (user_email, user_password) VALUES (?, ?)");
     
     $stmt->bind_param("ss", $user_email, $hashedPassword);
 

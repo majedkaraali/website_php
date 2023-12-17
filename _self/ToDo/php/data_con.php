@@ -2,7 +2,7 @@
 $servername = "localhost";
 $db_username = "root";
 $db_password = "";
-$dbname = "todo_site";
+$dbname = "note_data";
 
 
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
