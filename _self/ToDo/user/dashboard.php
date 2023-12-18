@@ -47,11 +47,27 @@
                 <input type="date" id="tdate" name="tdate" style="display:none;">
                 <br>
                 <label for="tlist">Tag</label>
+
                 <select name="tlist" id="tlist" onchange="toggleDateInput()">
                     <option value="important">Important</option>
                     <option value="planned">Planned</option>
                     <option value="task">Tasks</option>
+
+                    <?php
+                        $user_id = $_SESSION['user_id'];
+                        $qr="SELECT * FROM user_lists WHERE user_id=$user_id";
+                        $qr_run=mysqli_query($conn,$qr);
+                        if (mysqli_num_rows($qr_run)>0){
+                            foreach ($qr_run as $val){
+                            ?>
+                            <option value="<?=$val['list_name']?>"><?=$val['list_name']?></option>
+                           <?php
+                           }}
+                           
+                           ?>
+                    
                 </select>
+
                 <input class="add_task" type="submit">
             </form>
             <div class="btns">
@@ -86,7 +102,7 @@
         </thead>
         <?php
        
-        require("../php/func.php");
+      
         
         $user_id = $_SESSION['user_id'];
         $qr="SELECT * FROM common_tasks WHERE user_id=$user_id and status!='done'";

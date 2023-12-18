@@ -42,6 +42,7 @@
                     <span>Planned</span>
                 </a>
             </li>
+
             <li>
                 <a href="tasks.php" >
                 <i class="fa fa-sticky-note" aria-hidden="true"></i>
@@ -49,6 +50,35 @@
                     <span>Tasks</span>
                 </a>
             </li>
+
+            <?php
+            require("../php/func.php");
+         
+            $user_id = $_SESSION['user_id'];
+            $qr="SELECT * FROM user_lists WHERE user_id=$user_id";
+            $qr_run=mysqli_query($conn,$qr);
+
+            if (mysqli_num_rows($qr_run)>0){
+                foreach ($qr_run as $val){
+                    ?>
+                    
+                <li>
+                    <a href="user_list.php?list_name=<?=$val['list_name']?>">
+                    <i class="fa fa-th-list" aria-hidden="true"></i>
+                    <span><?=$val['list_name']?></span>
+                    <i id='trash' class="fa fa-trash-o" aria-hidden="true"></i>
+
+                    </a>
+                </li>
+
+
+                    <?php
+                }
+            }
+                    ?>
+            
+            
+            
 
 
             

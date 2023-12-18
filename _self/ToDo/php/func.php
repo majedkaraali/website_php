@@ -3,6 +3,7 @@ require("../php/data_con.php");
 
 
 
+
 function get_record($table,$qr){
     global $conn;
     $qr_run=mysqli_query($conn,$qr);
@@ -12,7 +13,7 @@ function get_record($table,$qr){
 
 function displayTasksByList($listType)
 {
-    
+    global $conn;
     $sql = "SELECT * FROM common_tasks WHERE list_type = '$listType'";
     $result = $conn->query($sql);
 
