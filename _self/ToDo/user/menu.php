@@ -184,9 +184,8 @@
         xhr.onload = function() {
         if (xhr.status === 200) {
         console.log(xhr.responseText);
-        
-
-        }     
+        }
+           
         else {
         console.error("Request failed: " + xhr.status);
         

@@ -116,7 +116,8 @@
             <td><?=$val['status'] ?></td>
 
             <td><?=$val['list_tag']?></td>
-            <td><button class="done">Done</button></td>
+
+            <td><button id="done_btn" class="done" onclick="complete_task(<?=$val['task_id']?>)">Done</button></td>
 
             </tr>
             <?php
@@ -173,11 +174,34 @@
  
     </div>
 
-
-
 </body>
 
 <script>
+    function complete_task(task_id){
+        
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "../php/remove_item.php");
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.onload = function() {
+        if (xhr.status === 200) {
+        console.log(xhr.responseText);
+       
+        }
+           
+        else {
+        console.error("Request failed: " + xhr.status);
+       
+        
+        
+
+        }};
+        xhr.send("task_id=" + encodeURIComponent(task_id));
+    
+        
+    }
+
+
     function submitForm(event) {
     event.preventDefault();
 
@@ -244,11 +268,6 @@
     
 
     }
-
-    /*function add_task(){
-        document.querySelector('form').submit();
-       
-    }*/
 
 
     window.onload = function () {
