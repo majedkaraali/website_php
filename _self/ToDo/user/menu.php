@@ -1,3 +1,4 @@
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <div class="menu">
     
         <ul>
@@ -6,6 +7,7 @@
                     <img src="../res/img/default.png" alt="user photo " width="50px" height= "50px"> 
                     <?php
                     session_start();
+
 
                     $user_name=$_SESSION['user_name'];
             
@@ -56,8 +58,8 @@
                 <a  href="#">
                 <i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
                     
-                <input   placeholder="List name" type="text">
-                <button class="create" id="create">Create</button>
+                <input placeholder="List name" type="text">
+                <button class="create" id="create" onclick="createlist()">Create</button>
                 </a>
             </li>
 
@@ -70,7 +72,6 @@
                 </button>
             </li>
 
-
             <li class="log-out">
                 <button  onclick="logout()"> 
                     <i class="fa fa-sign-out" aria-hidden="true"></i>
@@ -79,12 +80,6 @@
                     <span>Log out</span>
                 </button>
             </li>
-
-           
-
-
-            
-
         </ul>
     </div>
 
@@ -112,4 +107,63 @@
     function logout() {
       window.location.href = '../logut.php';
     }
+
+
+    /*function createList() {
+    alert(1);
+    var listName = document.querySelector('input[type="text"]').value;
+
+    
+    $.ajax({
+        type: 'POST',  
+        url: '../php/create_list.php',
+        data: { listName: listName },
+        success: function(response) {
+            console.log('Request successful', response);
+        },
+        error: function(error) {
+       
+            console.error('Error:', error);
+        }
+    });
+}
+
+  /*  function createlist() {
+    alert(1);
+    var listName = document.querySelector('input[type="text"]').value;
+    window.location.href = '../php/create_list.php';
+
+}*/
+
+
+
+
+
   </script>
+
+<script>
+  
+  
+  function createlist() {
+        const input = document.querySelector("input");
+        let listName = input.value;
+        let xhr = new XMLHttpRequest();
+
+        xhr.open("POST", "../php/create_list.php");
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.onload = function() {
+        if (xhr.status === 200) {
+        console.log(xhr.responseText);
+        
+
+        }     
+        else {
+        console.error("Request failed: " + xhr.status);
+        
+
+        }};
+    xhr.send("listName=" + encodeURIComponent(listName));
+    alert(listName)
+  }
+</script>
+

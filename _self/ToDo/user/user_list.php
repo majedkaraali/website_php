@@ -1,10 +1,11 @@
 <?php
-include 'list.php';
+require("../php/data_con.php");
 
 
 
 $listName = isset($_GET['list_name']) ? $_GET['list_name'] : '';
 
+echo $listName;
 
 if (!empty($listName)) {
     echo "<!DOCTYPE html>
@@ -20,8 +21,10 @@ if (!empty($listName)) {
 
     echo "</body>
         </html>";
+
+        
 } else {
-    // Handle the case when no list name is provided
+
     echo "List name not provided.";
 }
 ?>
