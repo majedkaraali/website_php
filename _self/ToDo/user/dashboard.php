@@ -179,25 +179,23 @@
 <script>
     function complete_task(task_id){
         
-
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", "../php/remove_item.php");
+        xhr.open("POST", "../php/func.php");
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhr.onload = function() {
         if (xhr.status === 200) {
         console.log(xhr.responseText);
        
         }
-           
+        
         else {
         console.error("Request failed: " + xhr.status);
-       
-        
-        
+   
+
 
         }};
         xhr.send("task_id=" + encodeURIComponent(task_id));
-    
+        location.reload();
         
     }
 

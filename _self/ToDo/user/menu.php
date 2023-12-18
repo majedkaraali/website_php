@@ -66,9 +66,12 @@
                     <a href="user_list.php?list_name=<?=$val['list_name']?>">
                     <i class="fa fa-th-list" aria-hidden="true"></i>
                     <span><?=$val['list_name']?></span>
-                    <i id='trash' class="fa fa-trash-o" aria-hidden="true"></i>
-
+                    
                     </a>
+                    <button onclick="facc()">
+                    <i id='trash' class="fa fa-trash-o" aria-hidden="true" ></i>
+                    </button>
+                    
                 </li>
 
 
@@ -76,13 +79,6 @@
                 }
             }
                     ?>
-            
-            
-            
-
-
-            
-
 
             <li class="input-list" id="input-list">
                 <a  href="#">
@@ -139,60 +135,53 @@
     }
 
 
-    /*function createList() {
-    alert(1);
-    var listName = document.querySelector('input[type="text"]').value;
-
-    
-    $.ajax({
-        type: 'POST',  
-        url: '../php/create_list.php',
-        data: { listName: listName },
-        success: function(response) {
-            console.log('Request successful', response);
-        },
-        error: function(error) {
-       
-            console.error('Error:', error);
-        }
-    });
-}
-
-  /*  function createlist() {
-    alert(1);
-    var listName = document.querySelector('input[type="text"]').value;
-    window.location.href = '../php/create_list.php';
-
-}*/
-
-
-
-
-
   </script>
 
 <script>
   
-  
+  function facc(){
+    alert(1111111111);
+  }
   function createlist() {
         const input = document.querySelector("input");
         let listName = input.value;
         let xhr = new XMLHttpRequest();
 
-        xhr.open("POST", "../php/create_list.php");
+        xhr.open("POST", "../php/func.php");
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.onload = function() {
+        if (xhr.status === 200) {
+        console.log(xhr.responseText);
+   
+        }
+           
+        else {
+        console.error("Request failed: " + xhr.status);
+        }};
+
+    xhr.send("listName=" + encodeURIComponent(listName));
+    location.reload();
+  }
+
+
+  function del_list(del_listName) {
+       alert(1);
+        
+        let xhr = new XMLHttpRequest();
+
+        xhr.open("POST", "../php/func.php");
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhr.onload = function() {
         if (xhr.status === 200) {
         console.log(xhr.responseText);
         }
-           
         else {
         console.error("Request failed: " + xhr.status);
-        
-
         }};
-    xhr.send("listName=" + encodeURIComponent(listName));
-    alert(listName)
+
+    xhr.send("del_listName=" + encodeURIComponent(del_listName));
+    location.reload();
   }
+
 </script>
 
