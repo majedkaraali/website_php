@@ -258,6 +258,7 @@ ul{
     gap: 50px;
     color: white; 
     margin-bottom: 200px;
+    transition: background-color 0.4s ease;
 }
 
 
@@ -282,25 +283,34 @@ ul{
    
 }
 
-.input-list a{
-    background-color: rgb(87, 83, 71);
-    gap: 20px;
-    font-size: medium;
-}
 
 input{
-    width: 60%;
+    width: 100%;
     height: 100%;
     border-radius: 6px;
     border: none;
     background-color: rgb(87, 83, 71);
+    
 
 
 }
 
 .input-list button{
-    padding: 4px;
+    padding: 5px;
+    
+    background-color: limegreen;
 
+    border-radius: 6px;
+    border: chartreuse;
+
+
+}
+
+.input-list button:hover{
+    padding: 6px;
+    background-color: #4CAF50;
+    transition: background-color 1.5s ease;
+    
 }
 
 
@@ -391,6 +401,23 @@ ul li .labl:hover {
 
 
 .menu .labl{
+    background-color: rgb(87, 83, 71);
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    margin: 5px;
+    margin-top: 10px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    text-decoration: none;
+    color: white;
+}
+
+.menu .labl-new{
     background-color: rgb(87, 83, 71);
     display: block;
     width: 100%;

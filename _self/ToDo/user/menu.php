@@ -93,12 +93,12 @@
                     ?>
 
             <li class="input-list" id="input-list">
-                <a  href="#">
+                <div class="labl-new">
                 <i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
                     
                 <input placeholder="List name" id="create_list" type="text">
                 <button class="create" id="create" onclick="createlist()">Create</button>
-                </a>
+                </div>
             </li>
 
             <li class="new-list" id="new-list">
