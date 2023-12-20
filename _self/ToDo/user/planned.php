@@ -38,7 +38,7 @@
 
         <?php
        
-        require("../php/func.php");
+ 
         $user_id = $_SESSION['user_id'];
         
         $qr = "SELECT * FROM common_tasks WHERE user_id = $user_id AND status != 'done' AND list_tag = 'planned'";

@@ -21,10 +21,10 @@ if (isset( $_POST['del_listName'])) {
 function create_list($listName){
     global $conn;
     global $user_id;
+    $listName=$_POST['listName'];
     session_start();
     $user_id = $_SESSION['user_id'];
     $sql = "INSERT INTO `user_lists` (`list_id`, `user_id`, `list_name`) VALUES (NULL, '$user_id', '$listName')";
-    $qr_run=mysqli_query($conn,$qr);
     $result = $conn->query($sql);
 
 }
@@ -34,13 +34,24 @@ function del_list($list_name){
     global $user_id;
     session_start();
     $user_id = $_SESSION['user_id'];
-    $sql = "DELETE FROM `user_lists` WHERE  list_name = $list_name;
-            DELETE FROM `common_tasks` WHERE list_tag ='$list_name'; ";
-    
-    $qr_run=mysqli_query($conn,$qr);
-    $result = $conn->query($sql);
 
-}
+    $stmt = $conn->prepare("DELETE FROM user_lists WHERE  list_name = (?)");
+    $stmt2 = $conn->prepare("DELETE FROM common_tasks WHERE list_tag =(?)");
+    
+    $stmt->bind_param("s", $list_name);
+    $stmt2->bind_param("s", $list_name);
+
+    if ($stmt->execute()) {
+        echo " successful!";
+        $stmt2->execute();
+    
+       
+
+
+    $stmt->close();
+    $conn->close();
+
+}}
 
 function get_record($table,$qr){
     global $conn;

@@ -44,3 +44,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 ?>
+onclick="del_list('<?=$val['list_name']?>')"
+
+
+
+<form  action="../php/del.php" method="post">
+            
+            <label for="del_listName">Email:</label><br>
+            <input type="del_listName" name="del_listName" id="del_listName" required><br>
+            <input type="submit">
+
+            </form>

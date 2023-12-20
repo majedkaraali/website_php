@@ -1,4 +1,5 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 <div class="menu">
     
         <ul>
@@ -23,54 +24,65 @@
             </li>
 
             <li>
-                <a href="dashboard.php" >
-                <i class="fa fa-home"></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
-            <li>
-                <a href="important.php" >
-                    <i class="fa fa-star"></i>
-                    
-                    <span>Important</span>
-                </a>
-            </li>
-            <li>
-                <a href="planned.php" >
-                    <i class="fa fa-calendar"></i>
-                    
-                    <span>Planned</span>
-                </a>
+              
+                    <a  class="labl" href="dashboard.php" >
+                        <i class="fa fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+              
             </li>
 
+
             <li>
-                <a href="tasks.php" >
-                <i class="fa fa-sticky-note" aria-hidden="true"></i>
-                    
-                    <span>Tasks</span>
-                </a>
+               
+                    <a class="labl" href="important.php" >
+                        <i class="fa fa-star"></i>
+                        <span>Important</span>
+                    </a>
+                
             </li>
 
+
+            <li>
+                    <a class="labl" href="planned.php" >
+                        <i class="fa fa-calendar"></i>
+                        <span>Planned</span>
+                    </a>
+                
+            </li>
+
+
+            <li>
+              
+                    <a class="labl" href="tasks.php" >
+                    <i class="fa fa-sticky-note" aria-hidden="true"></i>
+                        <span>Tasks</span>
+                    </a>
+                
+            </li>
+
+      
+            
             <?php
             require("../php/func.php");
          
             $user_id = $_SESSION['user_id'];
             $qr="SELECT * FROM user_lists WHERE user_id=$user_id";
             $qr_run=mysqli_query($conn,$qr);
+            
 
             if (mysqli_num_rows($qr_run)>0){
                 foreach ($qr_run as $val){
                     ?>
                     
                 <li>
+                    <div class="labl-user">
                     <a href="user_list.php?list_name=<?=$val['list_name']?>">
                     <i class="fa fa-th-list" aria-hidden="true"></i>
                     <span><?=$val['list_name']?></span>
-                    
-                    </a>
-                    <button onclick="facc()">
-                    <i id='trash' class="fa fa-trash-o" aria-hidden="true" ></i>
-                    </button>
+                    </a> 
+                    <i id='trash' class="fa fa-trash-o" aria-hidden="true" onclick="del_list('<?=$val['list_name']?>')"></i>
+                    </div>
                     
                 </li>
 
@@ -84,7 +96,7 @@
                 <a  href="#">
                 <i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
                     
-                <input placeholder="List name" type="text">
+                <input placeholder="List name" id="create_list" type="text">
                 <button class="create" id="create" onclick="createlist()">Create</button>
                 </a>
             </li>
@@ -139,11 +151,9 @@
 
 <script>
   
-  function facc(){
-    alert(1111111111);
-  }
+
   function createlist() {
-        const input = document.querySelector("input");
+        let input = document.getElementById("create_list");
         let listName = input.value;
         let xhr = new XMLHttpRequest();
 
@@ -162,26 +172,31 @@
     xhr.send("listName=" + encodeURIComponent(listName));
     location.reload();
   }
+  
 
 
   function del_list(del_listName) {
-       alert(1);
-        
-        let xhr = new XMLHttpRequest();
+    alert("Are you sure you want to delete"+del_listName);
 
-        xhr.open("POST", "../php/func.php");
-        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhr.onload = function() {
-        if (xhr.status === 200) {
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "../php/func.php");
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.onload = function() {
+    if (xhr.status === 200) {
         console.log(xhr.responseText);
-        }
-        else {
+    }
+    else {
         console.error("Request failed: " + xhr.status);
-        }};
+    }};
 
     xhr.send("del_listName=" + encodeURIComponent(del_listName));
-    location.reload();
+    
+    window.location.replace('..\\user\\dashboard.php');
+
+  
   }
 
 </script>
+
+
 
