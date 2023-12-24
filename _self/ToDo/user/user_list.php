@@ -20,13 +20,14 @@ $listName = isset($_GET['list_name']) ? $_GET['list_name'] : '';
 
 
 
-
 if (!empty($listName)) {
 
     require('menu.php');
 
     ?>
 
+<body>
+    
     <div class="board">
         <div class="head-box">
             <h1><?=$listName?></h1>
@@ -67,6 +68,7 @@ if (!empty($listName)) {
         }
 
         ?>
+        </table>
 
         <?php
         
@@ -75,3 +77,42 @@ if (!empty($listName)) {
     echo "List name not provided.";
 }
 ?>
+
+
+<div class="n_task">
+
+<form class="form_2" action="../php/insert.php" method="post" onsubmit="submitForm(event)">
+    <label for="tname">Task</label>
+    <input type="text" id="tname" name="tname" required>
+    <br>
+    <input type="hidden" name="tlist" value="<?=$listName?>">
+    <input type="submit" value="add task">
+    
+</form>
+
+</div>
+</div>
+
+</body>
+
+<script>
+    function submitForm(event) {
+    event.preventDefault();
+
+    fetch('../php/insert.php', {
+        method: 'POST',
+        body: new FormData(event.target),
+    })
+    .then(response => {
+        console.log(response);
+        if (response.ok) {
+            location.reload();
+          
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+</script>
+

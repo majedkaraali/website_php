@@ -64,7 +64,50 @@
 
         ?>
 
+
+    </table>
+
+    <div class="n_task">
+
+        <form class="form_2" action="../php/insert.php" method="post" onsubmit="submitForm(event)">
+            <label for="tname">Task</label>
+            <input type="text" id="tname" name="tname" required>
+            <br>
+            <input type="hidden" name="tlist" value="planned">
+            <br>
+            <label for="tdate" id="tdate_lbl" >Date</label>
+            <input type="date" id="tdate" name="tdate">
+            <br>
+            <input type="submit" value="add task">
+                
+            
+        </form>
+
+
+    </div>
+
 </div>
 
 
 </body>
+
+<script>
+    function submitForm(event) {
+    event.preventDefault();
+
+    fetch('../php/insert.php', {
+        method: 'POST',
+        body: new FormData(event.target),
+    })
+    .then(response => {
+        console.log(response);
+        if (response.ok) {
+            location.reload();
+           
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+</script>

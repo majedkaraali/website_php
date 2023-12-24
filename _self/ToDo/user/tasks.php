@@ -40,7 +40,7 @@
         $user_id = $_SESSION['user_id'];
         
       
-        $qr="SELECT * FROM common_tasks WHERE user_id=$user_id and status!='done'";
+        $qr="SELECT * FROM common_tasks WHERE user_id=$user_id and status!='done' and list_tag='task' ";
         $qr_run=get_record("common_tasks",$qr);
         
         if (mysqli_num_rows($qr_run)>0){
@@ -61,15 +61,45 @@
         }
 
         ?>
-
-   
-
+        </table>
 
 
-    <div>
-        <h1>test</h1>
+        
+    <div class="n_task">
+
+    <form class="form_2" action="../php/insert.php" method="post" onsubmit="submitForm(event)">
+        <label for="tname">Task</label>
+        <input type="text" id="tname" name="tname" required>
+        <br>
+        <input type="hidden" name="tlist" value="task">
+        <input type="submit" value="add task">
+        
+    </form>
+
+
     </div>
 
-
-
+</div>
 </body>
+
+
+<script>
+    function submitForm(event) {
+    event.preventDefault();
+
+    fetch('../php/insert.php', {
+        method: 'POST',
+        body: new FormData(event.target),
+    })
+    .then(response => {
+        console.log(response);
+        if (response.ok) {
+            location.reload();
+          
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+</script>

@@ -99,7 +99,7 @@
         console.log(response);
         if (response.ok) {
             location.reload();
-            alert("Task added successfuly");
+          
         }
     })
     .catch(error => {
