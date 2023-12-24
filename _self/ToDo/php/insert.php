@@ -2,7 +2,6 @@
 require('../php/data_con.php');
 session_start();
 
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $tname = $_POST['tname'];
     $tlist_tag=$_POST['tlist'];
