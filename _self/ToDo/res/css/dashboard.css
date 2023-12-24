@@ -44,7 +44,7 @@ body {
 
 
 .board {
-    padding-bottom: 0%;
+
     width: 75%;
     margin: 5px;
     min-height: 100vh;
@@ -52,7 +52,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    align-items: center;
+   
     overflow-y: auto; 
     overflow-x: hidden; 
 }
@@ -451,4 +451,9 @@ ul li .labl:hover {
     margin-top: 5px;
     font-size:x-large;
 
+}
+
+.nn{
+    width: 100%;
+    background-color: #333;
 }

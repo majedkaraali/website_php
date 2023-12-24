@@ -162,6 +162,8 @@
         xhr.onload = function() {
         if (xhr.status === 200) {
         console.log(xhr.responseText);
+        
+
    
         }
            
@@ -170,9 +172,16 @@
         }};
 
     xhr.send("listName=" + encodeURIComponent(listName));
-    location.reload();
+    setTimeout(function () {
+    location.reload();}, 200);
+
+
+
+
+    
   }
   
+
 
 
   function del_list(del_listName) {
@@ -192,6 +201,10 @@
     xhr.send("del_listName=" + encodeURIComponent(del_listName));
     
     window.location.replace('..\\user\\dashboard.php');
+
+    setTimeout(function () {
+    location.reload();}, 200);
+
 
   
   }

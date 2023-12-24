@@ -61,6 +61,20 @@
 
         ?>
 
+    <div>
+        <h1>gas</h1>
+    </div>
+
+    <div class="nn">
+    <form  action="../php/insert.php" method="post" onsubmit="submitForm(event)">
+                <label for="tname">Task</label>
+                <input type="text" id="tname" name="tname" required>
+                <br>
+                <input type="submit" value="add task">
+    </form>
+    
+    </div>
+
 </div>
 
 
