@@ -39,7 +39,7 @@
         <div class="new" id="new">
 
           
-            <form action="../php/insert.php" method="post" onsubmit="submitForm(event)">
+            <form class="form_1" action="../php/insert.php" method="post" onsubmit="submitForm(event)">
                 <label for="tname">Task</label>
                 <input type="text" id="tname" name="tname" required>
                 <br>

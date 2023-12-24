@@ -29,5 +29,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <p><?php echo $error_message; ?></p>
 <?php endif; ?>
 
-
-?>

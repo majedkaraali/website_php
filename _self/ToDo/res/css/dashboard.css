@@ -52,7 +52,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-   
+    align-items: center;
     overflow-y: auto; 
     overflow-x: hidden; 
 }
@@ -185,7 +185,7 @@ ul{
     transform: translateY(5px);
 }
 
-.new_task .new form{
+.new_task .new .form_1{
     display: flex;
     gap: 15px;
     font-size: large;
@@ -453,7 +453,24 @@ ul li .labl:hover {
 
 }
 
-.nn{
-    width: 100%;
-    background-color: #333;
+.n_task {
+    padding-bottom: 280px;
+    }
+    
+.n_task .form_2{
+    font-size: large;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    
+
 }
+
+.n_task .form_2 input{
+    padding: 10px 20px;
+    background-color: #ffcc66;
+}
+

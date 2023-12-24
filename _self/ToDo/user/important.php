@@ -39,7 +39,7 @@
         $user_id = $_SESSION['user_id'];
         
       
-        $qr="SELECT * FROM common_tasks WHERE user_id=$user_id and status!='done' and important='1' ";
+        $qr="SELECT * FROM common_tasks WHERE user_id=$user_id  and important='1' or  list_tag='important' and status!='done' ";
         $qr_run=get_record("common_tasks",$qr);
         
         if (mysqli_num_rows($qr_run)>0){
@@ -60,22 +60,52 @@
         }
 
         ?>
+         </table>
 
-    <div>
-        <h1>gas</h1>
+
+    <div class="n_task">
+
+        <form class="form_2" action="../php/insert.php" method="post" onsubmit="submitForm(event)">
+            <label for="tname">Task</label>
+            <input type="text" id="tname" name="tname" required>
+            <br>
+            <input type="hidden" name="tlist" value="important">
+            <input type="submit" value="add task">
+            
+        </form>
+
+
+        
     </div>
 
-    <div class="nn">
-    <form  action="../php/insert.php" method="post" onsubmit="submitForm(event)">
-                <label for="tname">Task</label>
-                <input type="text" id="tname" name="tname" required>
-                <br>
-                <input type="submit" value="add task">
-    </form>
     
-    </div>
+
+    
+ 
 
 </div>
 
 
 </body>
+
+<script>
+    function submitForm(event) {
+    event.preventDefault();
+
+    fetch('../php/insert.php', {
+        method: 'POST',
+        body: new FormData(event.target),
+    })
+    .then(response => {
+        console.log(response);
+        if (response.ok) {
+            location.reload();
+            alert("Task added successfuly");
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+</script>
+
