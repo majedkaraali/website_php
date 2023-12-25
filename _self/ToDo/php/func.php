@@ -5,7 +5,8 @@ $user_id = $_SESSION['user_id'];
 
 
 if (isset($_POST['task_id'])) {
-    updateTaskStatus($_POST['task_id']);
+    updateTaskStatus($_POST['task_id'],$_POST['operation']);
+
 }
 
 
@@ -78,9 +79,17 @@ function displayTasksByList($listType)
 }
 
 
-function updateTaskStatus($task_id){
+function updateTaskStatus($task_id,$operation){
+    
     global $conn;
-    $sql = "UPDATE common_tasks SET status = 'done' WHERE task_id = '$task_id'";
+    if ($operation=='complete_task'){
+        $sql = "UPDATE common_tasks SET status = 'done' WHERE task_id = '$task_id'";
+    }
+
+    elseif ($operation=='star_task'){
+        $sql = "UPDATE common_tasks SET important = CASE WHEN important = 0 THEN 1 ELSE 0 END WHERE task_id = '$task_id';";
+    }
+
     $result = $conn->query($sql);
 }
 

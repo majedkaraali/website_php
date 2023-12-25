@@ -117,7 +117,22 @@
 
             <td><?=$val['list_tag']?></td>
 
+            <?php
+
+            if ($val['important']==1){
+                ?>
+                <td ><i onclick="star_task(<?=$val['task_id']?>)" class="fa fa-star" aria-hidden="true"></i> </td>
+                <?php 
+            }
+            else{
+                ?>
+                <td ><i onclick="star_task(<?=$val['task_id']?>)" class="fa fa-star-o" aria-hidden="true"></i> </td>
+                <?php
+            }
+            ?>
+
             <td><button id="done_btn" class="done" onclick="complete_task(<?=$val['task_id']?>)">Done</button></td>
+            
 
             </tr>
             <?php
@@ -177,27 +192,37 @@
 </body>
 
 <script>
-    function complete_task(task_id){
-        
-        let xhr = new XMLHttpRequest();
-        xhr.open("POST", "../php/func.php");
-        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhr.onload = function() {
+   function star_task(task_id) {
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "../php/func.php");
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.onload = function () {
         if (xhr.status === 200) {
-        console.log(xhr.responseText);
-       
+            console.log(xhr.responseText);
+        } else {
+            console.error("Request failed: " + xhr.status);
         }
-        
-        else {
-        console.error("Request failed: " + xhr.status);
-   
+    };
+    let operation = "star_task";
+    xhr.send("task_id=" + encodeURIComponent(task_id) + "&operation=" + encodeURIComponent(operation));
+    location.reload();
+}
 
-
-        }};
-        xhr.send("task_id=" + encodeURIComponent(task_id));
-        location.reload();
-        
-    }
+function complete_task(task_id) {
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "../php/func.php");
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            console.log(xhr.responseText);
+        } else {
+            console.error("Request failed: " + xhr.status);
+        }
+    };
+    let operation = "complete_task";
+    xhr.send("task_id=" + encodeURIComponent(task_id) + "&operation=" + encodeURIComponent(operation));
+    location.reload();
+}
 
 
     function submitForm(event) {

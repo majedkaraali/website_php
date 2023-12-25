@@ -6,14 +6,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $tname = $_POST['tname'];
     $tlist_tag=$_POST['tlist'];
     $user_id = $_SESSION['user_id'];
+    $is_important=0;
+
+    if ($tlist_tag=='important'){
+        $is_important=1;
+        global $is_important;
+
+
+    }
+
     
     if (isset($_POST['tdate'])){
         $tdate = $_POST['tdate'];
-        $qr="INSERT INTO common_tasks (task_id,user_id,task_name,status,due_date,list_tag,important,creation_date) VALUES (NULL,'$user_id','$tname','pending','$tdate','$tlist_tag','0', current_timestamp());";
+        $qr="INSERT INTO common_tasks (task_id,user_id,task_name,status,due_date,list_tag,important,creation_date) VALUES (NULL,'$user_id','$tname','pending','$tdate','$tlist_tag',$is_important, current_timestamp());";
     }
 
     else{
-        $qr="INSERT INTO common_tasks (task_id,user_id,task_name,status,list_tag,important,creation_date) VALUES (NULL,'$user_id','$tname','pending','$tlist_tag','0', current_timestamp());";
+        $qr="INSERT INTO common_tasks (task_id,user_id,task_name,status,list_tag,important,creation_date) VALUES (NULL,'$user_id','$tname','pending','$tlist_tag',$is_important, current_timestamp());";
     }
     
     
