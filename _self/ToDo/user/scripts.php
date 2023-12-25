@@ -12,7 +12,8 @@
     };
     let operation = "star_task";
     xhr.send("task_id=" + encodeURIComponent(task_id) + "&operation=" + encodeURIComponent(operation));
-    location.reload();
+    setTimeout(function () {
+    location.reload();}, 200);
 }
 
 function complete_task(task_id) {
@@ -28,7 +29,8 @@ function complete_task(task_id) {
     };
     let operation = "complete_task";
     xhr.send("task_id=" + encodeURIComponent(task_id) + "&operation=" + encodeURIComponent(operation));
-    location.reload();
+    setTimeout(function () {
+    location.reload();}, 200);
 }
 
 
@@ -42,13 +44,15 @@ function complete_task(task_id) {
     .then(response => {
         console.log(response);
         if (response.ok) {
-            location.reload();
-            alert("Task added successfuly");
+            
+            
         }
     })
     .catch(error => {
         console.error('Error:', error);
     });
+    setTimeout(function () {
+    location.reload();}, 200);
 }
 
     

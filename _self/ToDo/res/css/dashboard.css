@@ -113,7 +113,16 @@ tr{
 
 .task .done:hover {
     background-color: rgb(57, 146, 61);
-    transform: rotate(-15deg);
+    transform: translateX(7px);
+}
+
+.task i{
+    transition: transform 0.5s ease;
+}
+.task i:hover{
+   color: #f5a70a;
+    transform: rotate(45deg);
+
 }
 
 
@@ -473,4 +482,6 @@ ul li .labl:hover {
     padding: 10px 20px;
     background-color: #ffcc66;
 }
+
+
 
