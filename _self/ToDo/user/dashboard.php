@@ -108,6 +108,7 @@
         $qr="SELECT * FROM common_tasks WHERE user_id=$user_id and status!='done'";
         $qr_run=get_record("common_tasks",$qr);
         if (mysqli_num_rows($qr_run)>0){
+           $counter = 0;
            foreach ($qr_run as $val){
             ?>
             <tr class="item">
@@ -136,6 +137,10 @@
 
             </tr>
             <?php
+                    $counter++;
+                    if ($counter >= 5) {
+                        break;
+                    }
            }
         }
         ?>
