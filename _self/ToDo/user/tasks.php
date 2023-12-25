@@ -6,7 +6,7 @@
     <link rel="stylesheet"  href="..\res\css\dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Dashboard</title>
+    <title>tasks</title>
 
 
 </head>
@@ -50,7 +50,7 @@
             <tr>
             <td><?=$val['task_name'] ?></td>
             <td><?=$val['status'] ?></td>
-            <td><button class="done">Done</button></td>
+            <td><button id="done_btn" class="done" onclick="complete_task(<?=$val['task_id']?>)">Done</button></td>
             
    
             </tr>
@@ -82,24 +82,7 @@
 </div>
 </body>
 
+<?php
+require('scripts.php');
+?>
 
-<script>
-    function submitForm(event) {
-    event.preventDefault();
-
-    fetch('../php/insert.php', {
-        method: 'POST',
-        body: new FormData(event.target),
-    })
-    .then(response => {
-        console.log(response);
-        if (response.ok) {
-            location.reload();
-          
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-}
-</script>

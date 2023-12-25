@@ -3,7 +3,7 @@
 require("../php/data_con.php");
 
 $list_name= $_POST['del_listName'];
-echo "$user_id"."$list_name";
+
 
 
 $sql = "DELETE FROM user_lists WHERE  list_name = $list_name;";

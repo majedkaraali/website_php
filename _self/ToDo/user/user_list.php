@@ -11,11 +11,6 @@
 </head>
 
 <?php
-
-
-
-
-
 $listName = isset($_GET['list_name']) ? $_GET['list_name'] : '';
 
 
@@ -57,7 +52,7 @@ if (!empty($listName)) {
             <tr>
             <td><?=$val['task_name'] ?></td>
             <td><?=$val['status'] ?></td>
-            <td><button class="done">Done</button></td>
+            <td><button id="done_btn" class="done" onclick="complete_task(<?=$val['task_id']?>)">Done</button></td>
             
    
             </tr>
@@ -95,24 +90,9 @@ if (!empty($listName)) {
 
 </body>
 
-<script>
-    function submitForm(event) {
-    event.preventDefault();
+<?php
+require('scripts.php');
+?>
 
-    fetch('../php/insert.php', {
-        method: 'POST',
-        body: new FormData(event.target),
-    })
-    .then(response => {
-        console.log(response);
-        if (response.ok) {
-            location.reload();
-          
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-}
-</script>
+
 

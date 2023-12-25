@@ -6,7 +6,7 @@
     <link rel="stylesheet"  href="..\res\css\dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Dashboard</title>
+    <title>Planned</title>
 
 
 </head>
@@ -53,7 +53,7 @@
             <td><?=$val['task_name'] ?></td>
             <td><?=$val['due_date'] ?></td>
             <td><?=$val['status'] ?></td>
-            <td><button class="done">Done</button></td>
+            <td><button id="done_btn" class="done" onclick="complete_task(<?=$val['task_id']?>)">Done</button></td>
    
             </tr>
 
@@ -91,23 +91,7 @@
 
 </body>
 
-<script>
-    function submitForm(event) {
-    event.preventDefault();
+<?php
+require('scripts.php');
+?>
 
-    fetch('../php/insert.php', {
-        method: 'POST',
-        body: new FormData(event.target),
-    })
-    .then(response => {
-        console.log(response);
-        if (response.ok) {
-            location.reload();
-           
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-}
-</script>
