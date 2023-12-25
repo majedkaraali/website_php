@@ -32,6 +32,22 @@ function complete_task(task_id) {
     setTimeout(function () {
     location.reload();}, 200);
 }
+function re_complete_task(task_id) {
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "../php/func.php");
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            console.log(xhr.responseText);
+        } else {
+            console.error("Request failed: " + xhr.status);
+        }
+    };
+    let operation = "re_complete_task";
+    xhr.send("task_id=" + encodeURIComponent(task_id) + "&operation=" + encodeURIComponent(operation));
+    setTimeout(function () {
+    location.reload();}, 200);
+}
 
 
     function submitForm(event) {

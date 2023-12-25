@@ -86,6 +86,10 @@ function updateTaskStatus($task_id,$operation){
         $sql = "UPDATE common_tasks SET status = 'done' WHERE task_id = '$task_id'";
     }
 
+    elseif ($operation=='re_complete_task'){
+        $sql = "UPDATE common_tasks SET status = 'pending' WHERE task_id = '$task_id'";
+    }
+
     elseif ($operation=='star_task'){
         $sql = "UPDATE common_tasks SET important = CASE WHEN important = 0 THEN 1 ELSE 0 END WHERE task_id = '$task_id';";
     }

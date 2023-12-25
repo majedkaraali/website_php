@@ -146,7 +146,6 @@
         }
         ?>
     </table>
-    
 
     <div class="head-box">
         <h1>Completed Tasks</h1>
@@ -157,16 +156,10 @@
         <thead>             
             <tr>
                 <th>TASK</th>
-                <th>STATUS</th>
+                <th>TAG</th>
             </tr>
         </thead>
-
-     
-
         <?php
-     
-        
-      
         $qr="SELECT * FROM common_tasks WHERE user_id=$user_id and status='done'";
         $qr_run=get_record("common_tasks",$qr);
         
@@ -177,8 +170,8 @@
             ?>
             <tr>
             <td><?=$val['task_name'] ?></td>
-            <td><?=$val['status'] ?></td>
-            <td><button>Redo</button></td>
+            <td><?=$val['list_tag']?></td>
+            <td><button id="redo_btn" class="redo" onclick="re_complete_task(<?=$val['task_id']?>)">Redo</button></td>
    
             </tr>
 
