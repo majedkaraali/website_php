@@ -18,7 +18,7 @@
 
 <body>
    
-
+    <div class="vertical-line"></div>
     <div class="board">
 
     <div class="head-box">

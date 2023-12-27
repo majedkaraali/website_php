@@ -33,7 +33,7 @@ body {
     width: 25%;
     padding: 20px;
     min-height: 100vh;
-    background-color: rgb(247, 159, 104);
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -60,6 +60,12 @@ body {
 html, body {
     height: 100%;
 }
+
+.vertical-line {
+    border-left: 1px solid #000;
+    height: 100vh;
+    
+  }
 
 
 
@@ -375,7 +381,7 @@ input{
 
 
 .menu .labl-user{
-    background-color: rgb(87, 83, 71);
+    background-color: white;
     display: block;
     width: 100%;
     height: 30px;
@@ -388,11 +394,11 @@ input{
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 .menu .labl-user a{
-    background-color: rgb(87, 83, 71);
+    background-color: white;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -402,14 +408,14 @@ input{
     border-radius: 6px;
     gap: 50px;
     text-decoration: none;
-    color: white;
+    color: black;
 
 }
 
 
 .labl-user a:hover{
-    color: #1b0f0f; 
-    background-color: rgb(170, 164, 145);
+    color: #076683; 
+    background-color: lightgray;
     transition: background-color 0.4s ease;
 
 }
@@ -417,15 +423,15 @@ input{
 
 
 ul li .labl:hover {
-    color: #1b0f0f; 
-    background-color: rgb(170, 164, 145);
+    color: #45c7ee; 
+    background-color: lightgray;
     transition: background-color 0.4s ease;
 
 }
 
 
 .menu .labl{
-    background-color: rgb(87, 83, 71);
+    background-color: white;
     display: block;
     width: 100%;
     height: 30px;
@@ -438,7 +444,8 @@ ul li .labl:hover {
     align-items: center;
     gap: 50px;
     text-decoration: none;
-    color: white;
+    color: black;
+    font-size: larger;
 }
 
 .menu .labl-new{
