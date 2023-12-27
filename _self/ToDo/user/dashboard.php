@@ -23,6 +23,7 @@
 
     <div class="head-box">
         <h1>Dashboard</h1>
+        <hr>
     </div>
 
 
