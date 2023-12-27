@@ -345,24 +345,30 @@ input{
 .sect .box {
     width: 200px;
     height: 200px;
-    background-color: #ffcc66; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffcc66;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     border-radius: 10px;
-    color: #333; 
+    color: #333;
     font-family: 'Arial', sans-serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-    background: linear-gradient(45deg, #ffcc66, #ff9966); 
+    background: linear-gradient(45deg, #ffcc66, #ff9966);
 
-    transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .sect .box:hover {
-    background: linear-gradient(45deg, #ff9966, #ffcc66); 
+    background: linear-gradient(45deg, #ff9966, #ffcc66);
+    transform: scale(1.06);
 }
+
 
 
 

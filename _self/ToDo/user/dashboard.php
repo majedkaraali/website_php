@@ -1,3 +1,6 @@
+<?php
+    require('menu.php');
+?>
 <html lang="en">
     
 <head>
@@ -14,9 +17,7 @@
 
 
 <body>
-    <?php
-    require('menu.php');
-    ?>
+   
 
     <div class="board">
 
@@ -26,10 +27,16 @@
 
 
     <div class="sect">
-        <div class="box"><span>Completed Tasks:2</span></div>
-        <div class="box"><span>Pending Tasks:8</span></div>
-        <div class="box"><span>Today Tasks:5</span></div>
-        <div class="box"><span>Missing Tasks:24</span></div>
+        <?php
+        $CompletedTasksCount=getCompletedTasksCount();
+        $PendingTasksCount=getPendingTasksCount();
+        $TodayTasksCount=getTodayTasksCount();
+        $MissingTasksCount=getMissingTasksCount();
+         ?>
+        <div class="box"><span>Completed Tasks</span><h2><?=$CompletedTasksCount?></h2></div>
+        <div class="box"><span>Pending Tasks</span><h2><?=$PendingTasksCount?></h2></div>
+        <div class="box"><span>Today Tasks</span><h2><?=$TodayTasksCount?></h2></div>
+        <div class="box"><span>Overdue Tasks</span><h2><?=$MissingTasksCount?></h2></div>
     </div>
 
     <div class="new_task">

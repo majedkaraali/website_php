@@ -99,6 +99,49 @@ function updateTaskStatus($task_id,$operation){
 
 
 
+function getCountOfTasks($status) {
+    global $conn;
+
+    $query = "SELECT COUNT(*) AS count FROM common_tasks WHERE status = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("s", $status);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    $count = $result->fetch_assoc()['count'];
+
+    $stmt->close();
+
+    return $count;
+}
+
+function getCompletedTasksCount() {
+    return getCountOfTasks('done');
+}
+
+function getPendingTasksCount() {
+    return getCountOfTasks('pending');
+}
+
+function getTodayTasksCount() {
+    global $conn;
+
+    $query = "SELECT COUNT(*) AS count FROM common_tasks WHERE due_date = CURDATE()";
+    $result = $conn->query($query);
+    $count = $result->fetch_assoc()['count'];
+
+    return $count;
+}
+
+function getMissingTasksCount() {
+    global $conn;
+
+    $query = "SELECT COUNT(*) AS count FROM common_tasks WHERE status = 'pending' AND due_date < CURDATE() AND list_tag='planned'";
+    $result = $conn->query($query);
+    $count = $result->fetch_assoc()['count'];
+
+    return $count;
+}
 
 
 ?>
