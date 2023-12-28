@@ -21,6 +21,7 @@
     <div class="board">
         <div class="head-box">
             <h1>To do Tasks</h1>
+            <hr>
         </div>
 
    
@@ -72,7 +73,7 @@
         <input type="text" id="tname" name="tname" required>
         <br>
         <input type="hidden" name="tlist" value="task">
-        <input class='send' type="submit" value="add task">
+        <input class='send' type="submit" value="Add task">
         
     </form>
 

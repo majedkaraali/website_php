@@ -21,6 +21,7 @@
     <div class="board">
         <div class="head-box">
             <h1>Planned Tasks</h1>
+            <hr>
         </div>
 
    
@@ -78,7 +79,7 @@
             <label for="tdate" id="tdate_lbl" >Date</label>
             <input type="date" id="tdate" name="tdate">
             <br>
-            <input class='send' type="submit" value="add task">
+            <input class='send' type="submit" value="Add task">
                 
             
         </form>

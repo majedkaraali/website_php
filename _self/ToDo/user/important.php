@@ -20,6 +20,7 @@
     <div class="board">
         <div class="head-box">
             <h1>Important Tasks</h1>
+            <hr>
         </div>
 
    
@@ -70,7 +71,7 @@
             <input type="text" id="tname" name="tname" required>
             <br>
             <input type="hidden" name="tlist" value="important">
-            <input class='send' type="submit" value="add task">
+            <input class='send' type="submit" value="Add task">
             
         </form>
 

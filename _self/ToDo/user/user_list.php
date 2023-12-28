@@ -26,6 +26,7 @@ if (!empty($listName)) {
     <div class="board">
         <div class="head-box">
             <h1><?=$listName?></h1>
+            <hr>
         </div>
 
    
@@ -81,7 +82,7 @@ if (!empty($listName)) {
     <input type="text" id="tname" name="tname" required>
     <br>
     <input type="hidden" name="tlist" value="<?=$listName?>">
-    <input class='send' type="submit" value="add task">
+    <input class='send' type="submit" value="Add task">
     
 </form>
 
