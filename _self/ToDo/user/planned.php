@@ -78,7 +78,7 @@
             <label for="tdate" id="tdate_lbl" >Date</label>
             <input type="date" id="tdate" name="tdate">
             <br>
-            <input type="submit" value="add task">
+            <input class='send' type="submit" value="add task">
                 
             
         </form>

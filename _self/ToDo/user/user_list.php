@@ -81,7 +81,7 @@ if (!empty($listName)) {
     <input type="text" id="tname" name="tname" required>
     <br>
     <input type="hidden" name="tlist" value="<?=$listName?>">
-    <input type="submit" value="add task">
+    <input class='send' type="submit" value="add task">
     
 </form>
 

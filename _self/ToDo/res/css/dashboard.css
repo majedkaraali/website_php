@@ -520,8 +520,19 @@ ul li .labl:hover {
 
 .n_task .form_2 input{
     padding: 10px 20px;
-    background-color: white;
+    background-color: rgb(232, 235, 190);
+    transition: transform 0.4s ease;
 }
 
+.n_task .form_2 .send{
+    background-color: rgb(0, 0, 0);
+    color: white;
+
+}
+
+.n_task .form_2 .send:hover{
+    background-color: rgb(50, 161, 205);
+    transform: translateX(7px);
+}
 
 

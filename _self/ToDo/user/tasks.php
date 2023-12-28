@@ -72,7 +72,7 @@
         <input type="text" id="tname" name="tname" required>
         <br>
         <input type="hidden" name="tlist" value="task">
-        <input type="submit" value="add task">
+        <input class='send' type="submit" value="add task">
         
     </form>
 
