@@ -102,6 +102,7 @@ tr{
     text-align: center;
     font-size: x-large;
 
+
 }
 
 .task button{
@@ -133,6 +134,7 @@ tr{
 .task i{
     transition: transform 0.5s ease;
 }
+
 .task i:hover{
    color: #f5a70a;
     transform: rotate(45deg);
@@ -146,37 +148,15 @@ ul{
 
 .profile{
     margin-bottom: 50px;
+    background-color: #3d4952;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-
-
-.new-list , .log-out{
-    width: 50%;
-
-}
-
-.footer{
-    height: 300px;
-    background-color:aqua}
-
-.new-list button{
-    width: 100%;
-    height: 40px;
-    background-color: rgb(50, 161, 205);
-    border: none;
-    border-radius: 6px;
-    font-size: medium;
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    margin: 5px;
-    gap: 50px;
-    color: white; 
-}
 
 
 .new_task .new{
-    margin: 50px 0px;
+    margin: 70px 0px 0px 0px;
     display:  none;
     flex-direction: column;
     align-items:center;
@@ -187,8 +167,7 @@ ul{
 .new_task .new_btn{
     padding: 20px;
     font-size: larger;
-    margin-top: 30px;
-    background-color: rgb(50, 161, 205);
+    background-color:  #000;
     border: none;
     color: white;
     text-align: center;
@@ -230,7 +209,7 @@ ul{
 
 .new_task .add_task{
  
-    background-color: rgb(50, 161, 205);
+    background-color:  #000;
     font-size: large;
     
     border: none;
@@ -247,12 +226,12 @@ ul{
 }
 
 .add_task:hover {
-    background-color: #4CAF50;
+    background-color: #4ca3af;
     transform: translateX(5px);
 }
 
 .add_task:active {
-    background-color: #4CAF50;
+    background-color: #4ca3af;
     transform: translateY(5px);
 }
 
@@ -263,8 +242,12 @@ ul{
 
 
 .new_task input{
-    background-color: rgb(232, 235, 190);
+    background-color: rgb(184, 184, 184);
     padding: 8px;
+}
+
+.new_task select{
+    background-color: rgb(184, 184, 184);
 }
 
 .log-out button{
@@ -281,22 +264,54 @@ ul{
     gap: 50px;
     color: white; 
     margin-bottom: 200px;
-    transition: background-color 0.4s ease;
+
+    transition: background-color 0.8s ease;
+}
+
+.new-list{
+    margin-top: 30px;
+    gap: 20px;
+}
+/*
+
+.new-list , .log-out{
+    width: 50%;
+
 }
 
 
+
+.new-list , .log-out{
+    width: 50%;
+
+}
+*/
+
+
+.new-list button{
+    width: 100%;
+    height: 40px;
+
+    background-color:#000;
+    border: none;
+    border-radius: 6px;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+    gap: 50px;
+    color: white;
+    transition: background-color 0.8s ease;
+}
 
 
 
 .new-list button:hover ,.log-out button:hover{
-    color: rgb(27, 15, 15); 
-    background-color: rgb(170, 164, 145);
-    transition: background-color 0.4s ease;
+    color: rgb(255, 255, 255); 
+    background-color: rgb(121, 121, 121);
+    
 }
-
-
-
-
 
 
  
@@ -305,7 +320,6 @@ ul{
 
    
 }
-
 
 input{
     width: 100%;
@@ -321,22 +335,21 @@ input{
 .input-list button{
     padding: 5px;
     
-    background-color: limegreen;
+    background-color: rgb(0, 0, 0);
 
     border-radius: 6px;
-    border: chartreuse;
+    border: rgb(5, 29, 59);
+    color: white;
 
 
 }
 
 .input-list button:hover{
     padding: 6px;
-    background-color: #4CAF50;
+    background-color: #4c5eaf;
     transition: background-color 1.5s ease;
     
 }
-
-
 
 
 
@@ -345,6 +358,7 @@ input{
     display: flex;
     gap: 20px;
     justify-content: space-around;
+    transition: background-color 0.8s ease;
 }
 
 .sect .box {
@@ -363,7 +377,8 @@ input{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
     
-    background: linear-gradient(to right, #0099FF, #0033CC);
+   /* background: linear-gradient(to right, #0099FF, #0033CC);*/
+    background: linear-gradient(to right, #467091, #6c8ef7);
     transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -393,6 +408,7 @@ input{
     gap: 10px;
     text-decoration: none;
     color: black;
+     transition: background-color 0.4s ease;
 }
 
 .menu .labl-user a{
@@ -407,23 +423,26 @@ input{
     gap: 50px;
     text-decoration: none;
     color: black;
+     transition: background-color 0.4s ease;
 
 }
 
 
 .labl-user a:hover{
-    color: #076683; 
+    color: #000; 
     background-color: lightgray;
     transition: background-color 0.4s ease;
+  
 
 }
 
 
 
 ul li .labl:hover {
-    color: #45c7ee; 
+    color: #000;
+
     background-color: lightgray;
-    transition: background-color 0.4s ease;
+   
 
 }
 
@@ -444,6 +463,7 @@ ul li .labl:hover {
     text-decoration: none;
     color: black;
     font-size: larger;
+    transition: background-color 0.4s ease;
 }
 
 .menu .labl-new{
