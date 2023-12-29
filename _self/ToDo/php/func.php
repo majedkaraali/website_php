@@ -72,10 +72,11 @@ function updateTaskStatus($task_id,$operation){
 
 function getCountOfTasks($status) {
     global $conn;
+    global $user_id;
 
-    $query = "SELECT COUNT(*) AS count FROM common_tasks WHERE status = ?";
+    $query = "SELECT COUNT(*) AS count FROM common_tasks WHERE status = ? AND user_id = ? ";
     $stmt = $conn->prepare($query);
-    $stmt->bind_param("s", $status);
+    $stmt->bind_param("ss", $status,$user_id);
     $stmt->execute();
 
     $result = $stmt->get_result();
@@ -96,20 +97,32 @@ function getPendingTasksCount() {
 
 function getTodayTasksCount() {
     global $conn;
+    global $user_id;
 
-    $query = "SELECT COUNT(*) AS count FROM common_tasks WHERE due_date = CURDATE()";
-    $result = $conn->query($query);
+    $query = "SELECT COUNT(*) AS count FROM common_tasks WHERE due_date = CURDATE() AND user_id = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("i", $user_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
     $count = $result->fetch_assoc()['count'];
+    $stmt->close();
+    
 
     return $count;
 }
 
 function getMissingTasksCount() {
     global $conn;
+    global $user_id;
 
-    $query = "SELECT COUNT(*) AS count FROM common_tasks WHERE status = 'pending' AND due_date < CURDATE() AND list_tag='planned'";
-    $result = $conn->query($query);
+    $query = "SELECT COUNT(*) AS count FROM common_tasks WHERE status = 'pending' AND due_date < CURDATE() AND list_tag='planned' AND user_id = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("i", $user_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
     $count = $result->fetch_assoc()['count'];
+    $stmt->close();
+   
 
     return $count;
 }
@@ -118,6 +131,7 @@ function getMissingTasksCount() {
 function displayTasksByList($listType)
 {
     global $conn;
+    
     $sql = "SELECT * FROM common_tasks WHERE list_type = '$listType'";
     $result = $conn->query($sql);
 

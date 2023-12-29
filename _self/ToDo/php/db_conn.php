@@ -2,7 +2,7 @@
 $servername = "localhost";
 $db_username = "root";
 $db_password = "";
-$dbname = "note_site";
+$dbname = "note_data2";
 
 $conn = new mysqli($servername, $db_username, $db_password);
 
@@ -13,10 +13,10 @@ if ($conn->connect_error) {
 if (!mysqli_select_db($conn, $dbname)) {
     $createDbQuery = "CREATE DATABASE IF NOT EXISTS $dbname";
     if ($conn->query($createDbQuery) === TRUE) {
-      
-      //  echo "Database created successfully";
+        create_the_tables($conn);  // Pass $conn to the function
+        echo "Database created successfully";
     } else {
-      //  echo "Error creating database: " . $conn->error;
+        echo "Error creating database: " . $conn->error;
     }
 
     $conn->close();
@@ -28,22 +28,7 @@ if (!mysqli_select_db($conn, $dbname)) {
     }
 }
 
-
-     // Create users table
-     $createUsersTableQuery = "
-     CREATE TABLE IF NOT EXISTS users (
-         user_id INT(11) AUTO_INCREMENT PRIMARY KEY,
-         user_name VARCHAR(200) NOT NULL,
-         user_email VARCHAR(200) NOT NULL,
-         user_password VARCHAR(200) NOT NULL
-     )";
-     if ($conn->query($createUsersTableQuery) === TRUE) {
-       //  echo "users table created successfully";
-     } else {
-       //  echo "Error creating users table: " . $conn->error;
-     }
-
-    // Create common_tasks table
+function create_the_tables($conn) {
     $createCommonTasksTableQuery = "
         CREATE TABLE IF NOT EXISTS common_tasks (
         task_id INT(11) AUTO_INCREMENT PRIMARY KEY,
@@ -57,14 +42,26 @@ if (!mysqli_select_db($conn, $dbname)) {
         FOREIGN KEY (user_id) REFERENCES users(user_id)
     )";
     if ($conn->query($createCommonTasksTableQuery) === TRUE) {
-     //   echo "common_tasks table created successfully";
+        echo "common_tasks table created successfully";
     } else {
-      //  echo "Error creating common_tasks table: " . $conn->error;
+        echo "Error creating common_tasks table: " . $conn->error;
     }
 
-   
+  
+    $createUsersTableQuery = "
+    CREATE TABLE IF NOT EXISTS users (
+        user_id INT(11) AUTO_INCREMENT PRIMARY KEY,
+        user_name VARCHAR(200) NOT NULL,
+        user_email VARCHAR(200) NOT NULL,
+        user_password VARCHAR(200) NOT NULL
+    )";
+    if ($conn->query($createUsersTableQuery) === TRUE) {
+        echo "users table created successfully";
+    } else {
+        echo "Error creating users table: " . $conn->error;
+    }
 
-    // Create user_lists table
+
     $createUserListsTableQuery = "
     CREATE TABLE IF NOT EXISTS user_lists (
         list_id INT(11) AUTO_INCREMENT PRIMARY KEY,
@@ -73,9 +70,9 @@ if (!mysqli_select_db($conn, $dbname)) {
         FOREIGN KEY (user_id) REFERENCES users(user_id)
     )";
     if ($conn->query($createUserListsTableQuery) === TRUE) {
-      //  echo "user_lists table created successfully";
+        echo "user_lists table created successfully";
     } else {
-      //  echo "Error creating user_lists table: " . $conn->error;
+        echo "Error creating user_lists table: " . $conn->error;
     }
-
+}
 ?>
